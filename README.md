@@ -17,12 +17,12 @@ Key improvements include:
   ```
 
 2. Modify the `nav` file to customise sidebar
-5. run to export:
+3. run to export:
   ```sh
   chmod +x export_all.sh
   ./export_all.sh
   ```
-
+4. Then your html files should be in the floder called output. click the index.html to view your note.
 
 # Options
 #### Local or self-contained css and JavaScript files
