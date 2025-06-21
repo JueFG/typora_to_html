@@ -9,6 +9,8 @@ Key improvements include:
 
 🔗 Enhanced internal anchor link support: Ensures proper intra-document navigation using anchor-style links (e.g., #section-title).
 
+# Example
+[click here to view example](https://juefg.github.io/typora_to_html/)
 # typora_to_html
 
 1. Put the md files into `typora_to_html` folder.
