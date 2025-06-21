@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w4 - Deontology</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#deontology-duty"
+          id="toc-deontology-duty">Deontology (duty)</a>
+          <ul>
+          <li><a href="#definition"
+          id="toc-definition">Definition</a></li>
+          <li><a href="#wd-rosss-7-basic-duties"
+          id="toc-wd-rosss-7-basic-duties">WD Ross’s 7 basic duties</a>
+          <ul>
+          <li><a href="#prima-facie-rules-may-conflict"
+          id="toc-prima-facie-rules-may-conflict">Prima Facie: Rules may
+          conflict</a></li>
+          </ul></li>
+          <li><a href="#kantian-deontology"
+          id="toc-kantian-deontology">Kantian Deontology</a>
+          <ul>
+          <li><a href="#definition-1"
+          id="toc-definition-1">Definition</a></li>
+          <li><a href="#categorical-imperative-绝对命令-absolute-rule"
+          id="toc-categorical-imperative-绝对命令-absolute-rule">Categorical
+          Imperative 绝对命令 / absolute rule</a>
+          <ul>
+          <li><a href="#formula-of-universal-law"
+          id="toc-formula-of-universal-law">Formula of Universal
+          Law</a></li>
+          <li><a href="#formula-of-humanity"
+          id="toc-formula-of-humanity">Formula of Humanity</a></li>
+          <li><a href="#ends-means-and-mere-means"
+          id="toc-ends-means-and-mere-means">Ends, means, and mere
+          means</a></li>
+          <li><a href="#dignity" id="toc-dignity">Dignity</a></li>
+          <li><a href="#autonomy" id="toc-autonomy">Autonomy</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#经典案例分析"
+          id="toc-经典案例分析">经典案例分析</a>
+          <ul>
+          <li><a href="#电车问题" id="toc-电车问题">电车问题</a></li>
+          </ul></li>
+          <li><a href="#对deontology的批评"
+          id="toc-对deontology的批评">对deontology的批评</a></li>
+          <li><a href="#summary" id="toc-summary">Summary</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="deontology-duty">Deontology (duty)</h1>
+<p>Deontology focuses on the <mark>inherent rightness or wrongness of
+actions</mark> based on duties, not just on the outcomes or
+consequences.</p>
+<h2 id="definition">Definition</h2>
+<ol type="1">
+<li><p>Deontic 是一个希腊词，意思是duty, obligation 责任</p></li>
+<li><p>如果某个行为<mark>违反了基本义务</mark>（例如欺骗、杀人），就算他可能导致了好结果，它依然可能是不对的。</p></li>
+<li><p>Duty / Rules can be <strong>highly specific</strong></p>
+<ul>
+<li><p>Keep promises</p></li>
+<li><p>Don’t lie</p></li>
+<li><p>Be fair</p></li>
+</ul></li>
+<li><p>Rule is <strong>general</strong>: apply to many
+circumstances</p></li>
+<li><p>Rule is <strong>basic</strong>: cannot be simpler</p></li>
+<li><p>我们<strong>通过学习</strong>，反思来理解duty: Don’t hurt your
+sister</p></li>
+<li><p>与Utilitarianism的区别：Utilitarianism says there is a single
+duty—to maximise utility. But Deontology says there are <strong>multiple
+basic duties</strong>.</p></li>
+</ol>
+<h2 id="wd-rosss-7-basic-duties">WD Ross’s 7 basic duties</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>Ross duties are prima facie duties, 是可以根据实际情况被推翻的.</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 63%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Fidelity</strong> <br />忠诚</td>
+<td>The duty to <strong>keep promises</strong>, agreements, and
+contracts</td>
+</tr>
+<tr>
+<td><strong>Reparation</strong><br />赔偿</td>
+<td>The duty to <strong>compensate others when we have harmed
+them</strong> or violated their rights</td>
+</tr>
+<tr>
+<td><strong>Gratitude</strong><br />感恩</td>
+<td>The duty to acknowledge and <strong>repay</strong> kindnesses and
+benefits received from others</td>
+</tr>
+<tr>
+<td><strong>Justice</strong></td>
+<td>The duty to <strong>distribute benefits and burdens fairly</strong>,
+according to principles of fairness and impartiality</td>
+</tr>
+<tr>
+<td><strong>Beneficence</strong><br />行善积德</td>
+<td>The duty to promote the well-being and happiness of others,
+including <strong>helping others</strong> in need.</td>
+</tr>
+<tr>
+<td><strong>Self-Improvement</strong></td>
+<td>The duty to <strong>improve one’s own abilities</strong> and
+character.</td>
+</tr>
+<tr>
+<td><strong>Non-maleficence</strong><br />不伤害别人</td>
+<td>The duty to <strong>avoid harming others</strong> or causing them
+unnecessary suffering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prima-facie-rules-may-conflict">Prima Facie: Rules may
+conflict</h3>
+<p>Ross’s list of duties are <em>prima facie
+duties</em>，它表示这些义务在“默认”情况下我们应该遵守，但在遇到冲突时 we
+use our own judgement, one rule may override another.</p>
+<p>Non-hierarchical: 这些duty没有严格层级关系(non-hierarchical)（e.g.,
+Reparation 和 Justice没有谁更重要）。But how to determine which is more
+important: no hard answer,<mark>use our own judgement.</mark></p>
+<blockquote>
+<p>[!TIP]</p>
+<p>“I promised to visit my friend… but I see a child drowning… duty to
+the child overrides the
+promise.”“我答应去看望我的朋友……但我看到一个孩子溺水……对孩子的责任凌驾于承诺之上。</p>
+</blockquote>
+<h2 id="kantian-deontology">Kantian Deontology</h2>
+<h3 id="definition-1">Definition</h3>
+<p>Right = “a good will”</p>
+<p>Good will =
+<mark>出于对道德义务的尊重而行动</mark>，而非基于欲望、后果、利益或情绪。</p>
+<p>有时候人可能会抱着善意做错事，</p>
+<p>所以即使结果不好，<mark>只要你是出于“duty”的动机去行动，你仍然是道德的。</mark></p>
+<h3 id="categorical-imperative-绝对命令-absolute-rule">Categorical
+Imperative 绝对命令 / absolute rule</h3>
+<p>Unconditional commands of reason that <mark>apply to all rational
+beings universally</mark>, regardless of circumstances.</p>
+<p>适用于所有理性生物的无条件理性命令……无论利益或情况如何</p>
+<h4 id="formula-of-universal-law">Formula of Universal Law</h4>
+<ul>
+<li>We act on ethical maxims 行为准则 or <em>rules/principles of
+action</em></li>
+<li><mark style="background-color: #90ee90;"> Moral Law:</mark> If our
+maxims apply to others, they apply to us too</li>
+<li><mark>设想如果所有人都这么做，如果会导致矛盾，那么改行为就是不道德的。</mark></li>
+<li>‘Do not cheat people’
+<ul>
+<li><mark>不道德，不是因为说谎会伤人，是因为当说谎这个行为被普遍化时无法不产生矛盾。</mark></li>
+</ul></li>
+<li>They have autonomy</li>
+</ul>
+<h4 id="formula-of-humanity">Formula of Humanity</h4>
+<blockquote>
+<p>“Act in such a way that you treat humanity, whether in your own
+person or in the person of any other, never merely as a means to an end,
+but always at the same time as an end”</p>
+<p>以<mark>尊重人性 end-in-themseleves</mark>
+为目的，<mark>而非</mark>把人当作<mark>纯粹的工具merely
+means</mark>来使用。</p>
+</blockquote>
+<h4 id="ends-means-and-mere-means">Ends, means, and mere means</h4>
+<ul>
+<li><mark style="background-color: #90ee90;"> Treat as
+<strong>end-in-herself / himself</strong></mark></li>
+<li><mark style="background-color: #90ee90;"> Never treat as
+<strong>merely means</strong> - “You use me!”</mark></li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<p>雇一个水管工修理下水道，对方自愿 → 你把她<strong>当作手段
+mean</strong>，<strong>但也尊重她作为一个人</strong>
+end-in-herself。</p>
+<p>强迫水管工劳动还拒绝支付报酬 → 把她<strong>当作仅仅的工具</strong>
+mere mean，违反道德法则。</p>
+</blockquote>
+<blockquote>
+<p>[!TIP]</p>
+<p>如果一个杀人犯问你谁谁谁藏在哪里，你要告诉他吗？</p>
+<p>Lying -&gt; you treat murderer as mere means -&gt; wrong!</p>
+<p>You should never lying.</p>
+</blockquote>
+<h4 id="dignity">Dignity</h4>
+<p><mark style="background-color: #90ee90;">people have equal dignity
+and worth</mark> 每个人都有平等的尊严和价值 -&gt;
+我们要平等地对待所有人</p>
+<p>人不可替代，不可被“牺牲掉”以达成某种“更好”的系统目标</p>
+<ul>
+<li>e.g. 偏见忽视了平等的权利和尊重</li>
+</ul>
+<h4 id="autonomy">Autonomy</h4>
+<p>Autonomy: ability to think for ourselves, plan our lives, act on our
+values</p>
+<ul>
+<li>我们要尊重每个人制定自己生活计划的权利</li>
+<li><mark style="background-color: #90ee90;">不能强迫、欺骗、替别人决定“什么对他好”</mark></li>
+<li>即使是弱势群体，也<mark style="background-color: #90ee90;">有决定自己命运的权利</mark></li>
+</ul>
+<p>To respect autonomy, we need people’s consent.</p>
+<ul>
+<li>e.g., collecting private data of users -&gt; let them know!</li>
+</ul>
+<h2 id="经典案例分析">经典案例分析</h2>
+<h3 id="电车问题">电车问题</h3>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 40%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr>
+<th>案例</th>
+<th>Utilitarianism</th>
+<th>Deontology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电车问题</td>
+<td>拉杆，因为救5个人比救一个人好。</td>
+<td>Duty of non-maleficence: 这个action涉及主动杀人<br />Duty of
+beneficence: 行善，救5人<br />non-hierarchical - use your
+judgement.</td>
+</tr>
+<tr>
+<td>Angry Mob</td>
+<td>宁愿杀死一个无辜的人，也不愿让混乱和死亡蔓延。</td>
+<td>non-maleficence in Ross basic duty<br />Absolute duty in Kant -
+cannot kill</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="对deontology的批评">对deontology的批评</h2>
+<ol type="1">
+<li><p>崇拜规则 worship rules -&gt; Morality is made for man!</p>
+<ul>
+<li>为什么要“无条件地遵守某些规则”？</li>
+<li>不能说谎，即使能救人？</li>
+<li>道德是为人设的，不是人为道德而活。</li>
+</ul></li>
+<li><p>Kant is too absolute -&gt; No rule/duty is sacrosanct!</p>
+<ul>
+<li>Kant:
+说谎、杀无辜、违反承诺等行为<strong>绝不允许</strong>，即使能带来更好后果。</li>
+<li>面对杀人犯，你还不能撒谎保护无辜？</li>
+</ul></li>
+<li><p>Ross judgment no absolute algorithm.</p>
+<ul>
+<li>不知道如何优先排序：
+<ul>
+<li>救人重要？</li>
+<li>守信重要？</li>
+<li>道歉重要？</li>
+<li>诚实重要？</li>
+</ul></li>
+<li>理论上强调规则，却在“冲突时”无法提供确定操作方式。</li>
+</ul></li>
+<li><p>现实世界中的可操作性差</p>
+<ol type="1">
+<li>义务论对
+AI、医疗、政策决策中的复杂情况<strong>缺乏操作性建议</strong> Lack of
+operational advice</li>
+<li>而Utilitarianism提供<strong>计算后果的方法</strong>，即使有争议，至少提供了量化工具
+Quantitative Tools</li>
+</ol></li>
+</ol>
+<hr />
+<h2 id="summary">Summary</h2>
+<ol type="1">
+<li>Understand deontology: Ross’s and Kant’s versions
+<ul>
+<li><a href="#wd-rosss-7-basic-duties">Ross</a>: prima facie duties
+灵活判断</li>
+<li><a href="#kantian-deontology">Kant</a>: categorical imperatives
+(absolute, universal law, human as end)</li>
+</ul></li>
+<li>Contrast with utilitarianism and the strengths/weaknesses of each
+theory</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Strength</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">强调人的尊严、自主与不可替代性 <br />equal
+dignity, worth, autonomy</td>
+<td>Ross judgment no absolute algorithm.</td>
+</tr>
+<tr>
+<td style="text-align: left;">提供道德底线<br />never kill, never
+lie</td>
+<td>Kant too absolute</td>
+</tr>
+<tr>
+<td style="text-align: left;">重视权利与正义，而非“最大幸福”<br />not
+maxi the overall happiness</td>
+<td>缺乏量化机制<br /> Lack of operational advice</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">有力批判“为达目的不择手段”的系统设计<br />merely
+means</td>
+<td>崇拜规则<br />worship rules</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><a href="#经典案例分析">Begin to apply deontology to cases</a></li>
+</ol>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>

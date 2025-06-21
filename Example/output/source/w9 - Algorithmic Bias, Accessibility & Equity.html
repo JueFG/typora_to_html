@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w9 - Algorithmic Bias, Accessibility &amp; Equity</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#algorithmic-bias-accessibility-and-equity"
+          id="toc-algorithmic-bias-accessibility-and-equity">Algorithmic
+          Bias, Accessibility, and Equity</a>
+          <ul>
+          <li><a href="#what-is-algorithmic-bias"
+          id="toc-what-is-algorithmic-bias">What is algorithmic
+          bias?</a></li>
+          <li><a href="#accessibility"
+          id="toc-accessibility">Accessibility</a>
+          <ul>
+          <li><a href="#what-is-accessibility"
+          id="toc-what-is-accessibility">What is accessibility</a></li>
+          <li><a href="#universal-usability-为所有人设计"
+          id="toc-universal-usability-为所有人设计">Universal usability
+          为所有人设计</a></li>
+          <li><a href="#hci-最早的评估维度"
+          id="toc-hci-最早的评估维度">HCI 最早的评估维度</a></li>
+          <li><a href="#wcag-手机的设计原则"
+          id="toc-wcag-手机的设计原则">WCAG 手机的设计原则</a></li>
+          <li><a href="#accessibility-in-ai-systems"
+          id="toc-accessibility-in-ai-systems">Accessibility in AI
+          Systems</a></li>
+          </ul></li>
+          <li><a href="#equity" id="toc-equity">Equity</a>
+          <ul>
+          <li><a href="#what-is-equity" id="toc-what-is-equity">What is
+          Equity</a></li>
+          <li><a href="#definitions-of-fairness"
+          id="toc-definitions-of-fairness">Definitions of Fairness</a>
+          <ul>
+          <li><a href="#statistical-parity统计公平-demographic-parity"
+          id="toc-statistical-parity统计公平-demographic-parity">1.
+          <strong>Statistical Parity（统计公平）/ Demographic
+          Parity</strong></a></li>
+          <li><a href="#equal-opportunity机会公平"
+          id="toc-equal-opportunity机会公平">2. <strong>Equal
+          Opportunity（机会公平）</strong></a></li>
+          <li><a href="#individual-fairness个体公平"
+          id="toc-individual-fairness个体公平">3. <strong>Individual
+          Fairness（个体公平）</strong></a></li>
+          <li><a href="#maximin-rawlsian-fairness最小最大原则"
+          id="toc-maximin-rawlsian-fairness最小最大原则">4.
+          <strong>Maximin / Rawlsian
+          Fairness（最小最大原则）</strong></a></li>
+          </ul></li>
+          <li><a href="#这些fairness的定义是有冲突的"
+          id="toc-这些fairness的定义是有冲突的">这些fairness的定义是有冲突的</a>
+          <ul>
+          <li><a href="#case-1-招聘" id="toc-case-1-招聘">Case 1
+          招聘</a></li>
+          </ul></li>
+          <li><a href="#equality-vs-equity"
+          id="toc-equality-vs-equity">Equality vs Equity</a></li>
+          </ul></li>
+          <li><a href="#algorithmic-bias"
+          id="toc-algorithmic-bias">Algorithmic Bias</a>
+          <ul>
+          <li><a href="#what-is-ai-bias" id="toc-what-is-ai-bias">What
+          is AI bias？</a></li>
+          <li><a href="#types-of-ai-bias" id="toc-types-of-ai-bias">3
+          types of AI bias</a>
+          <ul>
+          <li><a href="#data-driven-bias数据"
+          id="toc-data-driven-bias数据">1. <strong>Data-Driven
+          Bias（数据）</strong></a></li>
+          <li><a href="#algorithmic-bias算法"
+          id="toc-algorithmic-bias算法">2. <strong>Algorithmic
+          Bias（算法）</strong></a></li>
+          <li><a href="#prejudice-bias来自人类标签的社会偏见"
+          id="toc-prejudice-bias来自人类标签的社会偏见">3.
+          <strong>Prejudice
+          Bias（来自“人类标签”的社会偏见）</strong></a></li>
+          </ul></li>
+          <li><a href="#reasons-of-ai-bias"
+          id="toc-reasons-of-ai-bias">Reasons of AI bias</a>
+          <ul>
+          <li><a href="#历史数据的偏见historical-data"
+          id="toc-历史数据的偏见historical-data"><strong>历史数据的偏见（Historical
+          Data）</strong></a></li>
+          <li><a href="#开发团队缺乏多样性lack-of-diversity"
+          id="toc-开发团队缺乏多样性lack-of-diversity"><strong>开发团队缺乏多样性（Lack
+          of Diversity）</strong></a></li>
+          <li><a href="#模型复杂度与不透明性model-complexityopacity"
+          id="toc-模型复杂度与不透明性model-complexityopacity"><strong>模型复杂度与不透明性（Model
+          Complexity/Opacity）</strong></a></li>
+          </ul></li>
+          <li><a href="#impacts-of-ai-bias"
+          id="toc-impacts-of-ai-bias">Impacts of AI bias</a></li>
+          </ul></li>
+          <li><a href="#mitigating-ai-bias"
+          id="toc-mitigating-ai-bias">Mitigating AI Bias</a>
+          <ul>
+          <li><a href="#技术层面-technical-approaches"
+          id="toc-技术层面-technical-approaches">技术层面 (Technical
+          Approaches)</a>
+          <ul>
+          <li><a href="#去偏数据-数据增强de-biasing-data-augmentation"
+          id="toc-去偏数据-数据增强de-biasing-data-augmentation">1.
+          <strong>去偏数据 &amp; 数据增强（De-biasing &amp; Data
+          Augmentation）</strong></a></li>
+          <li><a href="#移除屏蔽群体特征removing-group-information"
+          id="toc-移除屏蔽群体特征removing-group-information">2.<strong>移除/屏蔽群体特征（Removing
+          Group Information）</strong></a></li>
+          <li><a href="#向量空间去偏word-embedding-debiasing"
+          id="toc-向量空间去偏word-embedding-debiasing">3.
+          <strong>向量空间去偏（Word Embedding
+          Debiasing）</strong></a></li>
+          <li><a href="#输出阶段再处理-adjust-output"
+          id="toc-输出阶段再处理-adjust-output">4.
+          <strong>输出阶段再处理 (Adjust Output)</strong></a></li>
+          <li><a href="#逻辑增强模型logic-aware-llms"
+          id="toc-逻辑增强模型logic-aware-llms">5.
+          <strong>逻辑增强模型（Logic-aware LLMs）</strong></a></li>
+          </ul></li>
+          <li><a href="#非技术层面extra-technical-approaches"
+          id="toc-非技术层面extra-technical-approaches">非技术层面（Extra-technical
+          Approaches）</a></li>
+          </ul></li>
+          <li><a href="#final-reflections-case-studies"
+          id="toc-final-reflections-case-studies">Final Reflections
+          &amp; Case Studies</a>
+          <ul>
+          <li><a href="#不能单单追求多样性"
+          id="toc-不能单单追求多样性">不能单单追求多样性</a></li>
+          <li><a href="#什么才是公平的结果"
+          id="toc-什么才是公平的结果">什么才是公平的结果？</a></li>
+          <li><a href="#评估大模型偏见的标准工具slides尾部列出"
+          id="toc-评估大模型偏见的标准工具slides尾部列出">评估大模型偏见的标准工具（slides尾部列出）</a></li>
+          </ul></li>
+          <li><a href="#mind-map" id="toc-mind-map">MIND MAP</a></li>
+          <li><a href="#assignment"
+          id="toc-assignment">Assignment</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="algorithmic-bias-accessibility-and-equity">Algorithmic Bias,
+Accessibility, and Equity</h1>
+<h2 id="what-is-algorithmic-bias">What is algorithmic bias?</h2>
+<ul>
+<li>“AI that makes decisions that are systematically unfair to certain
+groups of people” - from a [PriceWaterhouseCoopers research brief
+“做出对某些人群系统性不公平的决策的 AI”</li>
+<li>“The problem of ‘algorithmic bias’ can arise where an AI-informed
+decision-making tool produces outputs that result in unfairness.” - from
+the [Australian Human Rights Commission
+“当人工智能知情的决策工具产生的输出导致不公平时，就会出现’算法偏见’的问题。”</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="what-is-accessibility">What is accessibility</h3>
+<p>如果一项技术可以被残障人士和非残障人士一样高效地使用，它就被称为是“accessible”。</p>
+<p>可访问性是指尽可能多的人可以访问交互式产品的程度，重点是残疾人</p>
+<blockquote>
+<p>“Basically, technology is accessible
+<mark style="background-color: #90ee90;"> if it can be used as
+effectively by people</mark> with disabilities as by those without”
+(Thatcher, 2004).”</p>
+<p>Accessibility refers to the degree to which an interactive product
+<mark style="background-color: #90ee90;">is accessible by as many people
+as possible.</mark> A focus is on people with disabilities.” (Preece,
+2015)</p>
+</blockquote>
+<hr />
+<h3 id="universal-usability-为所有人设计">Universal usability
+为所有人设计</h3>
+<blockquote>
+<p>[!NOTE]</p>
+<p>一个为残疾人设计的功能，不是残疾人也可以用，这就是universal
+usability，也就是所谓的 “design for all approach”</p>
+</blockquote>
+<blockquote>
+<p>[!TIP]</p>
+<p>除了轮椅用户，坡道还帮助了谁？</p>
+<ul>
+<li>推婴儿车的母亲</li>
+<li>推搬运车的工人</li>
+<li>骑自行车的人</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="hci-最早的评估维度">HCI 最早的评估维度</h3>
+<p>In HCI (Human-computer interaction), usability refers to <mark>the
+ease with which users can interact with a system to achieve their goals
+effectively</mark>, efficiently, and satisfactorily.</p>
+<ul>
+<li>This involves evaluating elements such as:
+<ul>
+<li>the intuitiveness 界面直观</li>
+<li>the minimalism of user input 输入简洁</li>
+<li>the overall satisfaction and lack of frustration experienced by
+users 用户满意度与低挫折感</li>
+</ul></li>
+<li>Hardware and software</li>
+</ul>
+<hr />
+<h3 id="wcag-手机的设计原则">WCAG 手机的设计原则</h3>
+<p>W3C 提出的 WCAG（Web Content Accessibility
+Guidelines），包括以下四个设计原则</p>
+<p><strong>Perceivable 能看</strong></p>
+<ul>
+<li>信息必须能被所有用户感知，比如 larger text sizes or simpler
+layouts</li>
+</ul>
+<p><strong>Operable 能用</strong></p>
+<ul>
+<li><p>Users must be able to operate the interface</p></li>
+<li><p>所有功能可用键盘控制 (for those who cannot use a mouse),</p></li>
+<li><p>giving users enough time to read and use content</p></li>
+<li><p>不设计诱发癫痫seizures的内容</p></li>
+</ul>
+<p><strong>Understandable 能看懂</strong></p>
+<ul>
+<li>content readable and understandable</li>
+<li>web pages should appear and operate in predictable ways,</li>
+<li>Users should be assisted in avoiding and correcting mistakes</li>
+</ul>
+<p><strong>Robust 很兼容</strong></p>
+<ul>
+<li>内容应兼容各类设备，包括辅助技术 assistive technologies</li>
+<li>要向未来工具保持兼容性 compatibility</li>
+</ul>
+<hr />
+<h3 id="accessibility-in-ai-systems">Accessibility in AI Systems</h3>
+<p><strong>Designing Inclusive AI 包容性设计:</strong> AI systems should
+be designed with inclusivity in mind, ensuring they can be used by
+people with a range of physical and cognitive disabilities. This
+includes providing:</p>
+<ul>
+<li>accessible interfaces</li>
+<li>alternative input methods (like voice control or eye-tracking)</li>
+<li>outputs that consider various sensory impairments (like auditory or
+visual content alternatives). 考虑各种感觉障碍</li>
+<li>co-design</li>
+</ul>
+<p><strong>Bias and Fairness（关注偏见）</strong></p>
+<ul>
+<li><p>not discriminate against individuals with disabilities or other
+marginalized groups.</p>
+<p>避免模型因训练数据或设计而歧视残障或边缘群体</p></li>
+</ul>
+<p><strong>AI can facilitate accessibility </strong>AI 可作为促进
+Accessibility 的工具 :</p>
+<ul>
+<li>如语音助手、个性化自适应界面等 Voice Assistant, Personalized
+adaptive interface</li>
+</ul>
+<hr />
+<h2 id="equity">Equity</h2>
+<h3 id="what-is-equity">What is Equity</h3>
+<p>The quality of being fair and impartial: equity of treatment.</p>
+<hr />
+<h3 id="definitions-of-fairness">Definitions of Fairness</h3>
+<h4 id="statistical-parity统计公平-demographic-parity">1.
+<strong>Statistical Parity（统计公平）/ Demographic Parity</strong></h4>
+<p>不同群体的成员都有平等的机会，就达成统计公平。</p>
+<p>不管谁更合适，不管任何实际表现，大家被选中的比例要相等</p>
+<blockquote>
+<p>if the probability of a positive outcome is the same across all
+groups defined by an attribute.</p>
+<p><mark style="background-color: #90ee90;"> Implication: Members of
+different groups have equal chance of receiving the positive outcome,
+regardless of their actual qualifications or outcomes.</mark></p>
+</blockquote>
+<h4 id="equal-opportunity机会公平">2. <strong>Equal
+Opportunity（机会公平）</strong></h4>
+<ul>
+<li>更强的公平定义，仅在“值得获得正向结果”的人中实现平等。</li>
+</ul>
+<blockquote>
+<p>Specifically, it suggests that all groups should have equal true
+positive rates.</p>
+<p><mark style="background-color: #90ee90;">
+<strong>Implication</strong>: Focuses on fairness only among those who
+deserve the positive outcome, not across the entire
+population.</mark></p>
+</blockquote>
+<h4 id="individual-fairness个体公平">3. <strong>Individual
+Fairness（个体公平）</strong></h4>
+<ul>
+<li>相似的人应被相似对待</li>
+</ul>
+<blockquote>
+<p>This concept insists that similar individuals should receive similar
+treatment.</p>
+</blockquote>
+<h4 id="maximin-rawlsian-fairness最小最大原则">4. <strong>Maximin /
+Rawlsian Fairness（最小最大原则）</strong></h4>
+<ul>
+<li>来自哲学家 John Rawls：提升最弱势个体/群体的福利。</li>
+</ul>
+<blockquote>
+<p>“The goal is to <mark style="background-color: #90ee90;"> raise the
+minimum outcome to be as high as possible.”</mark></p>
+</blockquote>
+<h3 id="这些fairness的定义是有冲突的">这些fairness的定义是有冲突的</h3>
+<p><mark style="background-color: #90ee90;">
+这些不同的公平概念通常是不相容的。不可能同时满足多个主流的公平性定义。</mark></p>
+<blockquote>
+<p><strong>Impossibility Theorem:</strong> mathematically impossible for
+an algorithm to simultaneously satisfy various popular fairness
+measures.</p>
+</blockquote>
+<h4 id="case-1-招聘">Case 1 招聘</h4>
+<p><strong>Background</strong></p>
+<p>两组候选：</p>
+<ul>
+<li>Group A 平均得分：80</li>
+<li>Group B 平均得分：60</li>
+<li>两组标准差一样（10），即分布一致</li>
+<li>问题：从Group A选几人？从Group B 选几人？</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th>Fairness Apply</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Statistical Parity</td>
+<td><mark>无论群体实际表现如何，各群体入选的比例应当一样。</mark><br />如果整个群体中
+50% 是 A，50% 是 B，那最终入选者也应该是 50% A、50% B<br />为了实现
+Statistical Parity，公司必须： <br />降低 B 的门槛 or 提高 A
+的门槛<br />潜在风险：外在形式的“平等”</td>
+</tr>
+<tr>
+<td>Equal Opportunity</td>
+<td><mark>所有群体中，“真正合格者”被选中的概率应当相等。</mark><br />设定统一的分数线，比如
+<strong>65 分</strong><br />通过的人里 A
+会占更多<br />潜在风险：看起来“偏向”分数高的群体</td>
+</tr>
+</tbody>
+</table>
+<h3 id="equality-vs-equity">Equality vs Equity</h3>
+<p>经典 meme 图：“看球的三个孩子”：</p>
+<ul>
+<li>Equality：每人一个箱子，矮的还是看不到</li>
+<li>Equity：矮的两个孩子得到更多箱子，从而都能看到球赛</li>
+</ul>
+<p><img src="https://p.ipic.vip/bqe2wl.png" alt="image-20250620055607679" style="zoom:67%;" /></p>
+<h2 id="algorithmic-bias">Algorithmic Bias</h2>
+<h3 id="what-is-ai-bias">What is AI bias？</h3>
+<blockquote>
+<p>“Bias in AI systems refers to <mark>systematic and repeatable
+patterns or errors that create unfair outcomes</mark>…</p>
+</blockquote>
+<p>AI
+系统中的偏见，是指那些<strong>系统性、可重复出现</strong>的模式或错误，它们会导致<strong>对特定用户群体不公平的结果</strong>。不是偶然的。</p>
+<p>这些偏见在实际使用中，可能表现为：</p>
+<ul>
+<li><strong>歧视某些群体</strong>（如特定种族、性别）</li>
+<li><strong>误伤某些用户</strong>（如左撇子、非英语母语者）</li>
+<li><strong>降低系统可靠性和信任度</strong></li>
+</ul>
+<h3 id="types-of-ai-bias">3 types of AI bias</h3>
+<h4 id="data-driven-bias数据">1. <strong>Data-Driven
+Bias（数据）</strong></h4>
+<blockquote>
+<p>“Occurs when the training datasets are not representative of the
+broader population.”</p>
+<p>“当训练数据集不能代表更广泛的人群时发生。”</p>
+</blockquote>
+<p>例如，如果你的训练数据主要来自男性白人，那么系统学习到的“典型用户”形象就会偏向这类人群。其他群体会被“误读”或“忽视”。</p>
+<h4 id="algorithmic-bias算法">2. <strong>Algorithmic
+Bias（算法）</strong></h4>
+<blockquote>
+<p>“Arises from assumptions and simplifications in the algorithms that
+skew outputs.”“</p>
+<p>源于算法中扭曲输出的假设和简化。”</p>
+</blockquote>
+<ul>
+<li>是算法设计本身的问题</li>
+<li>可能因为模型设计hypothesis不合理（如特征选择）</li>
+<li>也可能是ai logic 问题</li>
+</ul>
+<p>例如：某些信用评估模型可能过度依赖“邮政编码”这一变量，而这背后其实关联着族裔或经济状况。</p>
+<h4 id="prejudice-bias来自人类标签的社会偏见">3. <strong>Prejudice
+Bias（来自“人类标签”的社会偏见）</strong></h4>
+<blockquote>
+<p>“This form of bias can manifest when the design of the algorithm or
+the operational environment has inherent or societal prejudices…”</p>
+<p>“当算法的设计或作环境具有固有的或社会偏见时，这种形式的偏见就会表现出来……”</p>
+</blockquote>
+<ul>
+<li><strong>社会偏见问题</strong> —— 人类带偏见label进入数据</li>
+<li>举例：数据本身是“全面的”，但<strong>标签本身带有偏见</strong>（比如医生将女性症状标为情绪问题，而男性相似症状标为逻辑问题）</li>
+<li>讲者强调：<strong>偏见不仅存在于数据本身，还存在于标签、系统设计、甚至运行环境中。</strong></li>
+</ul>
+<h3 id="reasons-of-ai-bias">Reasons of AI bias</h3>
+<h4
+id="历史数据的偏见historical-data"><strong>历史数据的偏见（Historical
+Data）</strong></h4>
+<blockquote>
+<p>Use of historical data that contains past prejudices and
+inequalities.</p>
+</blockquote>
+<p>例如：以前女性被歧视的历史，会在算法中被“学习”，成为现实的“再现”。</p>
+<h4
+id="开发团队缺乏多样性lack-of-diversity"><strong>开发团队缺乏多样性（Lack
+of Diversity）</strong></h4>
+<blockquote>
+<p>AI development teams lacking diversity can inadvertently encode their
+biases.</p>
+</blockquote>
+<p>例如：全由白人男性构成的工程团队，可能不会注意到系统对非英语使用者的障碍。</p>
+<h4
+id="模型复杂度与不透明性model-complexityopacity"><strong>模型复杂度与不透明性（Model
+Complexity/Opacity）</strong></h4>
+<blockquote>
+<p>“Opaque models can obscure biases, making them harder to detect and
+correct.”“</p>
+<p>复杂和不透明的模型会掩盖偏见，使其更难检测和纠正。”</p>
+</blockquote>
+<h3 id="impacts-of-ai-bias">Impacts of AI bias</h3>
+<ol type="1">
+<li><strong>社会不公（Social Injustice）</strong></li>
+</ol>
+<blockquote>
+<p>“Discriminatory practices reinforced in vital areas like employment,
+law enforcement, and lending.”</p>
+<p>强化了就业、执法、贷款等领域的歧视</p>
+</blockquote>
+<ol type="1">
+<li><strong>经济不平等加剧（Economic Disparities）</strong></li>
+</ol>
+<blockquote>
+<p>Exacerbation of existing economic inequalities through biased
+automated decisions.</p>
+<p>自动决策系统可能加剧穷人或弱势群体的不利处境</p>
+</blockquote>
+<ol type="1">
+<li><strong>信任缺失（Loss of Trust）</strong></li>
+</ol>
+<blockquote>
+<p>“Erosion of public confidence in AI technologies…”</p>
+<p>“公众对 AI 技术的信心受到侵蚀…”</p>
+</blockquote>
+<h2 id="mitigating-ai-bias">Mitigating AI Bias</h2>
+<p>减轻 AI bias 的手段大致分为两类：</p>
+<h3 id="技术层面-technical-approaches">技术层面 (Technical
+Approaches)</h3>
+<h4 id="去偏数据-数据增强de-biasing-data-augmentation">1.
+<strong>去偏数据 &amp; 数据增强（De-biasing &amp; Data
+Augmentation）</strong></h4>
+<ul>
+<li>多样化数据（debias / diversify the dataset）</li>
+<li>数据增强（data augmentation）</li>
+</ul>
+<h4
+id="移除屏蔽群体特征removing-group-information">2.<strong>移除/屏蔽群体特征（Removing
+Group Information）</strong></h4>
+<ul>
+<li>屏蔽群体身份信息（rm group info likes gender, sexuality）</li>
+</ul>
+<h4 id="向量空间去偏word-embedding-debiasing">3.
+<strong>向量空间去偏（Word Embedding Debiasing）</strong></h4>
+<ul>
+<li>训练后修改向量空间（如 Hard Debias / Double Hard Debias
+algorithms）</li>
+<li>e.g., add queen = female, rm nurse = female.</li>
+</ul>
+<h4 id="输出阶段再处理-adjust-output">4. <strong>输出阶段再处理 (Adjust
+Output)</strong></h4>
+<blockquote>
+<p>Adjust ML/LLM outputs with a higher symbolic layer of AI Replace the
+non-acceptable words with their acceptable synonyms.</p>
+</blockquote>
+<ul>
+<li>替换 牛马 -&gt; 打工人</li>
+</ul>
+<p>这种方式并不修改模型，而是加一层 NLP 过滤器。</p>
+<h4 id="逻辑增强模型logic-aware-llms">5.
+<strong>逻辑增强模型（Logic-aware LLMs）</strong></h4>
+<p>MIT 在 2023 研究中引入“逻辑关系”（if-then等规则）以减少偏见。</p>
+<h3
+id="非技术层面extra-technical-approaches">非技术层面（Extra-technical
+Approaches）</h3>
+<p>“不是所有问题都能靠技术解决。”</p>
+<ol type="1">
+<li><strong>多样化开发团队 （Diverse Development Teams）</strong></li>
+<li><strong>偏见审计机制（Bias Audits）</strong>
+<ul>
+<li>Regular audits of AI systems to check for biases in data,
+algorithms, and outcomes.</li>
+</ul></li>
+<li><strong>制定行业监管标准（Regulatory Frameworks）</strong></li>
+<li><strong>教育与意识提升（Human-in-the-loop Awareness）</strong>
+<ul>
+<li>培养“人类监控者”意识（humans-in-the-loop），让人作为最终判决者</li>
+<li>AI做辅助，人类做决策</li>
+</ul></li>
+</ol>
+<h2 id="final-reflections-case-studies">Final Reflections &amp; Case
+Studies</h2>
+<p>真正的公平无法通过统计方法自动定义；有时过度“修正”会违反事实；</p>
+<h3 id="不能单单追求多样性">不能单单追求多样性</h3>
+<p>讲者展示了 <strong>DALL-E</strong> 生成图像的例子，结果荒谬：</p>
+<ul>
+<li><strong>纳粹士兵的图像出现了非白人女性</strong></li>
+<li><strong>美国独立建国者的图像中出现非白人男性</strong></li>
+</ul>
+<p>这源于模型过度追求“多样性代表”，导致历史不实与视觉错误。</p>
+<h3 id="什么才是公平的结果">什么才是公平的结果？</h3>
+<p>这是一个伦理抉择问题，而不是纯技术问题。</p>
+<h3
+id="评估大模型偏见的标准工具slides尾部列出">评估大模型偏见的标准工具（slides尾部列出）</h3>
+<p>介绍了目前研究界用来测试大语言模型偏见的标准工具和数据集：</p>
+<ul>
+<li>BBQ (Bias Benchmark for Question
+Answering)BBQ（问答的偏差基准）</li>
+<li>BOLD (Bias in Open-ended Language
+Generation)BOLD（开放式语言生成的偏见）</li>
+<li>JobFair (性别偏见招聘模拟框架）</li>
+</ul>
+<h2 id="mind-map">MIND MAP</h2>
+<ul>
+<li><strong>About accessibility.</strong>
+<ul>
+<li>如果一项技术可以被残障人士和非残障人士一样高效地使用，它就被称为是“accessible”。</li>
+<li>Universal accessibility</li>
+<li>HCI</li>
+<li>WCAG</li>
+<li>Accessibility in AI Systems</li>
+</ul></li>
+<li><strong>About equity.</strong>
+<ul>
+<li>The quality of being fair and impartial: equity of treatment.</li>
+<li>4 definiition
+<ul>
+<li>Statistical Parity -&gt; 所有人都有平等的机会</li>
+<li>Equal Opportunity -&gt; 只有强者才有平等的机会 (e.g.,
+相同的分数线)</li>
+<li>Individual Fairness</li>
+<li>Maximin / Rawlsian Fairness -&gt; 帮最弱</li>
+</ul></li>
+<li>Equality vs equality
+<ul>
+<li>Equality：给一样的资源，产生不一样的机会，各凭本事</li>
+<li>equality：帮助弱小，给不一样的资源，产生一样的机会</li>
+</ul></li>
+</ul></li>
+<li><strong>AI bias:</strong>
+<ul>
+<li>系统性的，不是偶然发生的</li>
+<li>3 types of bias
+<ul>
+<li>Data-Driven Bias 数据不全面 (e.g., 只有白男)</li>
+<li>Algorithmic Bias 算法设计 (logic, hypothesis)</li>
+<li>Prejudice Bias 人类标签</li>
+</ul></li>
+<li>Reasons of AI bias
+<ul>
+<li>History data</li>
+<li>Lack of diversity</li>
+<li>Model complexity and opacity</li>
+</ul></li>
+<li>Mitigating bias
+<ul>
+<li>techo</li>
+<li>Non techo</li>
+</ul></li>
+<li>Reflections on bias</li>
+<li>过度追求公平反而会失去现实性</li>
+<li>纳粹士兵的图像出现了非白人女性</li>
+</ul></li>
+</ul>
+<h2 id="assignment">Assignment</h2>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr>
+<th>Virtue Ethics 概念</th>
+<th>可用于 HireRight 案例的应用角度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Justice（公正）</strong></td>
+<td>是否公平对待所有求职者，特别是残障、年长、种族少数群体？</td>
+</tr>
+<tr>
+<td><strong>Phronesis（审慎实践智慧）</strong></td>
+<td>GlobalTech 在采用此技术前，是否真正理解其潜在不公？</td>
+</tr>
+<tr>
+<td><strong>Integrity（诚实）</strong></td>
+<td>系统是否夸大准确性？公司是否坦诚与求职者说明其运作机制？</td>
+</tr>
+<tr>
+<td><strong>Compassion（同情）</strong></td>
+<td>设计者是否体现了对少数者处境的理解和考虑？</td>
+</tr>
+<tr>
+<td><strong>Responsibility（责任感）</strong></td>
+<td>如果系统歧视某人，谁来负责？HireRight背后的公司承担吗？</td>
+</tr>
+</tbody>
+</table>
+<p>Data-Driven Bias（数据偏见）-
+这些数据本身可能偏向年轻、非残障、白人群体。</p>
+<p>所以结果是：</p>
+<ul>
+<li>年长者、少数族裔、残障者被打低分；</li>
+<li>这些分数差异并非来自候选人能力差，而是数据代表性差。</li>
+</ul>
+<p><strong>公正（justice）</strong>：使用偏见数据训练出的模型，是否体现了对每位求职者的“公正评价”？</p>
+<p><strong>同理（empathy）</strong>：是否考虑了少数群体被误评的情绪与后果？</p>
+<p><strong>责任（responsibility）</strong>：知道数据存在偏见却仍用它来训练模型，是一种道德失责。</p>
+<p>Algorithmic Bias（算法设计偏见）</p>
+<p>这指的是<strong>模型本身的设计逻辑或处理方式</strong>带来的偏差。例如：</p>
+<ul>
+<li>用面部表情判断性格？</li>
+<li>用语言流利程度判断认知能力？ 这些假设本身就是有问题的。</li>
+</ul>
+<p>HireRight 分析的是“facial expressions, body language, speech
+patterns” → 对于：HireRight 分析的是“面部表情、肢体语言、语音模式” →
+对于：</p>
+<ul>
+<li>有语言障碍、说第二语言的人群；</li>
+<li>有面部/运动障碍者（如自闭症谱系、帕金森）；</li>
+<li>含蓄文化背景者（如东亚）；</li>
+</ul>
+<p>系统将他们“非典型”的交流风格解读为“低沟通能力”、“文化不适配”。</p>
+<p><strong>智慧（phronesis）</strong>：真正有德的AI设计者，会对行为背后的文化/身体差异做出谨慎判断，而不是简单归类。</p>
+<p><strong>诚实（integrity）</strong>：将这些不可靠的假设输出为“评分报告”，是否具有误导性？对求职者是否诚实？</p>
+<p><strong>谦逊（humility）</strong>：算法是否假设自己“万能”？是否低估了人类判断中的复杂性？</p>
+<p>Prejudice Bias（社会偏见移植）</p>
+<ul>
+<li>系统生成“candidate insights”，分析“personality traits”“cultural
+fit”，这些指标本身就模糊、主观。</li>
+<li>这些定义可能是：
+<ul>
+<li>来自主流文化偏见（如美国企业文化）；</li>
+<li>用传统成功者标准训练（白人男性中产）；</li>
+<li>无视群体多样性和社会结构。</li>
+</ul></li>
+</ul>
+<p><strong>德行智慧（practical
+wisdom）</strong>：使用“刻板分类指标”来评价人是否合适岗位，是缺乏实践智慧的体现。</p>
+<p><strong>公正（justice）</strong>：按“文化契合度”而不是能力打分，是对文化/种族差异的不公。</p>
+<p><strong>勇气（courage）</strong>：在道德上，有勇气质疑“主流招聘标准”本身是否公正，才是道德系统应具备的勇气</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>

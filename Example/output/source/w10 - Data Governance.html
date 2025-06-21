@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w10 - Data Governance</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#data-governance"
+          id="toc-data-governance"><strong>Data Governance</strong></a>
+          <ul>
+          <li><a href="#what-is-data-governance"
+          id="toc-what-is-data-governance">What is Data
+          Governance?</a></li>
+          <li><a href="#data-governance-in-practice"
+          id="toc-data-governance-in-practice">Data governance in
+          practice</a>
+          <ul>
+          <li><a href="#data-governance-lead-的职责"
+          id="toc-data-governance-lead-的职责">Data Governance Lead
+          的职责</a></li>
+          <li><a href="#为什么需要数据治理"
+          id="toc-为什么需要数据治理">为什么需要数据治理？</a></li>
+          </ul></li>
+          <li><a href="#from-organisations-to-users"
+          id="toc-from-organisations-to-users">From organisations to
+          users</a>
+          <ul>
+          <li><a href="#example" id="toc-example">Example</a></li>
+          <li><a href="#relationship-symmetrical"
+          id="toc-relationship-symmetrical">Relationship
+          symmetrical?</a></li>
+          </ul></li>
+          <li><a href="#laws-that-protect-us"
+          id="toc-laws-that-protect-us">Laws that protect us</a>
+          <ul>
+          <li><a href="#law-gdpr" id="toc-law-gdpr">Law: GDPR</a>
+          <ul>
+          <li><a href="#使用用户的data时必须深思熟虑"
+          id="toc-使用用户的data时必须深思熟虑">1.
+          使用用户的data时，必须深思熟虑</a></li>
+          <li><a href="#我有权知道你要了什么数据"
+          id="toc-我有权知道你要了什么数据">2.
+          我有权知道你要了什么数据</a></li>
+          <li><a href="#发生泄露时组织必须及时通知受影响用户"
+          id="toc-发生泄露时组织必须及时通知受影响用户">3.
+          发生泄露时，组织必须及时通知受影响用户。</a></li>
+          <li><a href="#a-right-to-explainability"
+          id="toc-a-right-to-explainability">4. A ‘right’ to
+          explainability</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#organisations-a-tale-of-beacons-and-pixels."
+          id="toc-organisations-a-tale-of-beacons-and-pixels.">Organisations:
+          ‘A Tale of Beacons and Pixels’.</a>
+          <ul>
+          <li><a href="#case-facebook-的-beacon-事件"
+          id="toc-case-facebook-的-beacon-事件">Case: Facebook 的 Beacon
+          事件</a></li>
+          <li><a href="#tracking-pixels"
+          id="toc-tracking-pixels">Tracking pixels</a>
+          <ul>
+          <li><a href="#how-it-work" id="toc-how-it-work">How it
+          work</a></li>
+          <li><a href="#why-dangerous" id="toc-why-dangerous">Why
+          dangerous?</a></li>
+          <li><a href="#企业是否在做出改变"
+          id="toc-企业是否在做出改变">企业是否在做出改变?</a></li>
+          </ul></li>
+          <li><a href="#summary" id="toc-summary">Summary</a></li>
+          </ul></li>
+          <li><a href="#users-your-rights-freedoms-and-countermeasures."
+          id="toc-users-your-rights-freedoms-and-countermeasures.">Users:
+          Your rights, freedoms, and countermeasures.</a>
+          <ul>
+          <li><a href="#权利你可以选择不被追踪"
+          id="toc-权利你可以选择不被追踪">权利：你可以选择“不被追踪”</a></li>
+          <li><a href="#问题信息茧房-information-cocoon"
+          id="toc-问题信息茧房-information-cocoon">问题：信息茧房
+          (Information Cocoon)</a></li>
+          <li><a href="#哲学视角我们有道德义务保护他人自由"
+          id="toc-哲学视角我们有道德义务保护他人自由">哲学视角：我们有道德义务保护他人自由</a></li>
+          <li><a href="#实际反制手段有哪些"
+          id="toc-实际反制手段有哪些">实际反制手段有哪些？</a></li>
+          </ul></li>
+          <li><a
+          href="#a-new-problem---generative-ai-and-large-languageimage-models"
+          id="toc-a-new-problem---generative-ai-and-large-languageimage-models">A
+          new problem - Generative AI and large language/image
+          models</a>
+          <ul>
+          <li><a href="#example-1" id="toc-example-1">Example</a></li>
+          <li><a href="#summary-1" id="toc-summary-1">Summary</a></li>
+          </ul></li>
+          <li><a href="#case-study-你的数据是否比你活得更久"
+          id="toc-case-study-你的数据是否比你活得更久">Case Study:
+          你的数据是否比你活得更久？</a>
+          <ul>
+          <li><a href="#平台对这些数据是否有义务永久保存"
+          id="toc-平台对这些数据是否有义务永久保存">平台对这些“数据”是否有义务永久保存？</a></li>
+          <li><a href="#数据的人性化权利是否重要"
+          id="toc-数据的人性化权利是否重要">数据的“人性化权利”是否重要？</a></li>
+          <li><a href="#数据永生的悖论"
+          id="toc-数据永生的悖论">数据“永生”的悖论</a></li>
+          </ul></li>
+          <li><a
+          href="#case-study-data-governance-data-release-and-privacy-issues"
+          id="toc-case-study-data-governance-data-release-and-privacy-issues">Case
+          Study: <em>Data Governance, Data Release, and Privacy
+          Issues</em></a>
+          <ul>
+          <li><a href="#背景澳大利亚-myki-数据集匿名化失败事件"
+          id="toc-背景澳大利亚-myki-数据集匿名化失败事件">背景：澳大利亚
+          Myki 数据集匿名化失败事件</a></li>
+          <li><a href="#为什么这不是真正的匿名"
+          id="toc-为什么这不是真正的匿名">为什么这不是真正的“匿名”？</a></li>
+          <li><a href="#伦理反思数据公开是否值得"
+          id="toc-伦理反思数据公开是否值得">伦理反思：数据公开是否值得？</a></li>
+          <li><a href="#数据治理的真正难题风险不可预测"
+          id="toc-数据治理的真正难题风险不可预测">数据治理的真正难题：风险不可预测</a></li>
+          </ul></li>
+          <li><a href="#mind-map" id="toc-mind-map">Mind Map</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="data-governance"><strong>Data Governance</strong></h1>
+<h2 id="what-is-data-governance">What is Data Governance?</h2>
+<p>数据治理是一个结构性计划，涵盖组织架构、政策、原则、数据质量，最终目标是保障信息的<strong>准确性和风险控制</strong>。</p>
+<blockquote>
+<p>“Data governance represents the program used by [an organisation] to
+manage the organisational bodies, policies, principles, and quality that
+will ensure access to <mark style="background-color: #90ee90;">accurate
+and risk-free</mark> data and information…” ——John Ladley (2012)</p>
+</blockquote>
+<p>这个定义更注重<strong>决策权、责任分配、流程控制</strong>。它描绘了一个系统化的框架，用于定义谁可以在什么情况下、用什么方式处理什么信息。</p>
+<blockquote>
+<p>“A system of decision rights and accountabilities for
+information-related processes… who can take what actions with what
+information, and when, under what circumstances, using what methods.”
+——Data Governance Institute</p>
+<p>“Planning, oversight, and control over management of data…” ——DAMA
+International</p>
+</blockquote>
+<p><mark style="background-color: #90ee90;"> <strong>Key
+points</strong></mark></p>
+<ul>
+<li>Formal / system / process / model</li>
+<li>Manage / oversight / control / planning</li>
+<li>Rights / accountability</li>
+<li>Who / what / where</li>
+<li>Accurate / risk-free</li>
+</ul>
+<h2 id="data-governance-in-practice">Data governance in practice</h2>
+<p>本节从一个实际招聘岗位出发，帮助我们理解<strong>数据治理在现实组织中的具体职责和挑战</strong>，并由此引出为什么组织需要严谨的数据治理计划，尤其是为了规避<strong>数据泄露所带来的法律和声誉风险</strong>。</p>
+<h3 id="data-governance-lead-的职责">Data Governance Lead 的职责</h3>
+<ul>
+<li>确保数据的<strong>质量和分类</strong>正确</li>
+<li>数据的<strong>可访问性与合规性</strong></li>
+<li>为同事提供<strong>数据治理指导和培训</strong></li>
+<li>评估组织的数据成熟度</li>
+<li><strong>推动数据文化转型</strong>（如新的流程与标准）</li>
+</ul>
+<figure>
+<img src="https://p.ipic.vip/yeogxc.png"
+alt="image-20250620065208888" />
+<figcaption aria-hidden="true">image-20250620065208888</figcaption>
+</figure>
+<h3 id="为什么需要数据治理">为什么需要数据治理？</h3>
+<p><strong>For starters: Risk.</strong></p>
+<p>从假如你是知名人物，你的数据被泄漏了怎么办：</p>
+<ul>
+<li>数据泄露不仅是技术问题，更带来<strong>法律责任和品牌声誉损害</strong></li>
+<li>对名人、政要、富豪尤其如此，因为他们有更多<strong>资源去追责</strong></li>
+</ul>
+<p>这个例子揭示了：<strong>良好的数据治理是组织规避被起诉的关键防线。</strong></p>
+<h2 id="from-organisations-to-users">From organisations to users</h2>
+<p>即使我们没有直接使用某些大公司（如 Amazon、Block
+Inc）的服务，我们的<strong>数据仍可能被他们收集、推断或间接利用</strong>。这段内容旨在揭露<strong>用户和技术组织之间的非对称数据关系</strong>。</p>
+<h3 id="example">Example</h3>
+<p>使用Myki刷卡、点外卖、路上刷手机，你就在不断生成与共享数据.</p>
+<p>这些数据即使不是直接给某一公司，往往也通过技术基础设施间接流入“大公司”的系统。</p>
+<ul>
+<li>Amazon
+可能是你所用服务的底层云提供商（AWS）。你填过的表单、提交的数据、注册邮箱，都可能被存储在
+AWS 的服务器上。即使你不用Amazon, 你的数据也可能进入 Amazon 系统。</li>
+</ul>
+<p>即使你用现金支付，如果你注册了忠诚计划（loyalty
+program），留下了手机号等信息，它仍会记录并发送到 Square 的服务器。</p>
+<ul>
+<li>所以即使你以为“现金 = 无痕”，也可能被数据技术系统记录。</li>
+</ul>
+<h3 id="relationship-symmetrical">Relationship symmetrical?</h3>
+<p><strong>数据是对称的吗？</strong></p>
+<ul>
+<li><p>与咖啡店之间是对称关系：你可以选择不加入会员计划，不提供手机号，仅留下名字与订单。</p></li>
+<li><p>与大科技公司的关系是<strong>严重非对称的</strong>：</p>
+<ul>
+<li><p>它们能通过跨网站追踪（cookies、pixels）分析你偏好。</p></li>
+<li><p>你却<strong>不知道它们到底知道你什么</strong>，也不清楚你的数据存在哪、如何被用。</p></li>
+</ul></li>
+</ul>
+<p><strong>Asymmetrical的后果是什么？</strong></p>
+<ul>
+<li><strong>Asymmetric
+relationship（非对称关系）</strong>：你对组织的了解远不及他们对你的了解。</li>
+<li>这会导致<strong>失去控制感</strong>、<strong>缺乏同意的知情权</strong>，并使你难以行使权利</li>
+</ul>
+<h2 id="laws-that-protect-us">Laws that protect us</h2>
+<p>Should users have a <mark><em>duty</em></mark> to stop
+microtargeting?
+在面对microtargeting时，用户是否有<mark>义务</mark>采取行动抵制它？</p>
+<p><strong>Using Kant Deontology:</strong></p>
+<ul>
+<li>你知道微观定向如何实现（例如 Facebook/Instagram
+的个性化算法）。</li>
+<li>你知道如果大家都不作为，会导致后果（例如 Cambridge Analytica
+干预选举）。</li>
+<li>所以，你应该阻止这类公司继续通过平台影响选举。</li>
+<li>结论：你有义务采取行动来阻止这种行为。</li>
+</ul>
+<h3 id="law-gdpr">Law: GDPR</h3>
+<p>Example: 各种cookie弹窗 -&gt; GDPR
+要求在收集用户任何形式的“个人数据”之前，<strong>必须征得明确同意</strong>（specific,
+unambiguous consent）, including:</p>
+<h4 id="使用用户的data时必须深思熟虑">1.
+使用用户的data时，必须深思熟虑</h4>
+<blockquote>
+<p>data protection is something you now have to consider whenever you do
+anything with other people’s personal data”, not just an
+afterthought</p>
+</blockquote>
+<h4 id="我有权知道你要了什么数据">2. 我有权知道你要了什么数据</h4>
+<blockquote>
+<p>People have the <strong>right to see what personal data you have
+about them and how</strong> you’re using it</p>
+</blockquote>
+<h4 id="发生泄露时组织必须及时通知受影响用户">3.
+发生泄露时，组织必须及时通知受影响用户。</h4>
+<blockquote>
+<p>You are also required to quickly communicate data breaches to your
+data subjects****” and not just keep quiet about it!</p>
+</blockquote>
+<h4 id="a-right-to-explainability">4. A ‘right’ to explainability</h4>
+<p>如果决策由算法作出（如信用评分），用户有权要求解释。</p>
+<h2 id="organisations-a-tale-of-beacons-and-pixels.">Organisations: ‘A
+Tale of Beacons and Pixels’.</h2>
+<p>本节讲解了广告平台和社交媒体公司如何通过<strong>网络追踪像素（tracking
+pixels）和信标（beacons）</strong>来收集用户“在站外”的浏览行为。这种机制使得微观定向广告（microtargeting）成为可能，也揭示了用户几乎无法察觉的数据泄露路径。</p>
+<h3 id="case-facebook-的-beacon-事件">Case: Facebook 的 Beacon 事件</h3>
+<p>Facebook
+曾经使用“Beacon”技术，在用户访问别的网站（例如购物网站）时偷偷追踪行为并<strong>同步到
+Facebook 上展示</strong>。</p>
+<p>用户非常不满，因为他们以为“离开 Facebook
+就安全了”，结果发现<strong>隐私暴露了</strong>。</p>
+<h3 id="tracking-pixels">Tracking pixels</h3>
+<h4 id="how-it-work">How it work</h4>
+<p>网站或邮件中可以隐藏一个<strong>不可见的 1x1 像素图像</strong>。</p>
+<p>一旦你打开页面/邮件，浏览器就会<strong>从服务器加载这个图像</strong>，同时会回传你的：</p>
+<ul>
+<li>IP 地址</li>
+<li>cookie（可识别你身份）</li>
+<li>浏览器信息</li>
+</ul>
+<p>广告公司据此知道你“看过这个网页/邮件”，甚至可以跨网站拼凑你的兴趣偏好。(microtargeting)</p>
+<h4 id="why-dangerous">Why dangerous?</h4>
+<ul>
+<li>可追踪用户身份、IP、浏览历史</li>
+<li><strong>无需用户知情或许可</strong></li>
+</ul>
+<h4 id="企业是否在做出改变">企业是否在做出改变?</h4>
+<p>有些公司开始把“保护隐私”作为品牌卖点（例如 Apple
+表示不追踪用户）。</p>
+<ul>
+<li>Firefox 的“增强跟踪保护”（Enhanced Tracking Protection）</li>
+<li>Apple Safari 的隐私政策页面</li>
+</ul>
+<p>-&gt; 这真的公平吗？是否只让“买得起 iPhone”的人才能保护隐私？</p>
+<h3 id="summary">Summary</h3>
+<blockquote>
+<p><strong>Tracking Pixels（像素追踪）和 Web
+Beacons（网络信标）是一种隐蔽的用户行为追踪技术</strong>，它们悄悄记录用户访问了哪些网页、点了哪些链接、看了哪些内容。</p>
+</blockquote>
+<ul>
+<li>它们几乎无法被察觉，也<strong>常绕过用户同意机制</strong>。</li>
+<li>它们构成了<strong>微观定向广告系统的技术支柱</strong>，造成用户与平台之间的严重权力不对称。</li>
+</ul>
+<blockquote>
+<p>这也引出了下一个重要讨论：<strong>如果“保护隐私”成为一种高端商品（例如只有
+Apple
+提供），那是否造成了“有权保护者”与“无法自保者”之间的不公平”</strong>？</p>
+</blockquote>
+<ul>
+<li>科技原本的愿景是“赋能所有人”（enabler）</li>
+<li>如果隐私只属于富人，科技反而在制造不平等，而非消除它</li>
+</ul>
+<hr />
+<h2 id="users-your-rights-freedoms-and-countermeasures.">Users: Your
+rights, freedoms, and countermeasures.</h2>
+<p><strong>用户的权利、自由与反制手段</strong>:
+本节从用户角度出发，探讨我们<strong>可以如何抵制数据滥用和算法操控</strong>，特别是在微观定向广告（microtargeting）、推荐算法、过滤泡泡（filter
+bubbles）盛行的时代。讲者从哲学和技术两个层面出发，强调用户并非完全无力，而是可以通过工具、习惯与伦理反思来应对.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><strong>作为用户，我们有权利，也有责任，去反制微观定向与算法操控。</strong>
+你的行为影响的不只是你自己，而是整个社交网络。
+从哲学层面来说，你的自由<strong>包含了促进他人自由的义务</strong>。</p>
+</blockquote>
+<h3 id="权利你可以选择不被追踪">权利：你可以选择“不被追踪”</h3>
+<p>Firefox 和 Apple 的隐私工具</p>
+<h3 id="问题信息茧房-information-cocoon">问题：信息茧房 (Information
+Cocoon)</h3>
+<blockquote>
+<p>“Algorithmic personalisation has led to the ‘filter bubble’
+phenomenon.”</p>
+</blockquote>
+<ul>
+<li><strong>Filter
+Bubble（过滤泡泡）</strong>：算法只推荐你喜欢的内容，导致你看不到不同意见或其他信息。</li>
+<li>长期沉浸在单一视角中，<strong>削弱批判性思维与社会理解力</strong>。</li>
+</ul>
+<h3
+id="哲学视角我们有道德义务保护他人自由">哲学视角：我们有道德义务保护他人自由</h3>
+<blockquote>
+<p>“We are free only if we recognise our responsibilities to others in
+promoting their freedom to pursue their own projects.”</p>
+</blockquote>
+<ul>
+<li>如果你明知算法可以放大你点赞的信息，却继续推送虚假内容，你就有可能<strong>间接限制他人的信息自由</strong></li>
+<li>Beauvoir
+的观点是：真正的自由必须包含<strong>对他人自由的尊重与维护</strong></li>
+</ul>
+<h3 id="实际反制手段有哪些">实际反制手段有哪些？</h3>
+<ul>
+<li>Ad blockers</li>
+<li>避免使用“登录即集数据”的平台（如 Meta、TikTok）</li>
+<li>调整算法推荐（例如关闭 YouTube 历史记录）</li>
+<li>推广使用 <strong>隐私友好的工具和平台</strong>（如
+Signal、Firefox）</li>
+</ul>
+<h2 id="a-new-problem---generative-ai-and-large-languageimage-models">A
+new problem - Generative AI and large language/image models</h2>
+<p>生成式 AI 与大模型所带来的数据治理新挑战</p>
+<p>本节讲述了生成式 AI（如
+ChatGPT、Claude、Gemini）在数据使用过程中<strong>引发的隐私、伦理与所有权问题</strong>，包括：</p>
+<ul>
+<li>用户是否无意中泄露了他人的信息？</li>
+<li>模型训练是否侵犯了公众或机构的权利？</li>
+<li>我们是否有“被遗忘权”或“退出模型”的可能？</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<p>给 ChatGPT 提出一个复杂但私密的请求
+(我的朋友Dazza是一个xxx的人，他喜欢xxx，帮我预测xxx)</p>
+<p>-&gt; 谁拥有这些信息？Dazza 同意了吗？-&gt; ChatGPT
+并非只记录你的对话意图，它可能会将数据用于未来训练</p>
+<p>-&gt; 模型对“你”的理解不一定可控 -&gt; unimelb is blue -&gt; Who owns
+these concepts?</p>
+<p>-&gt; 模型可不可以“忘记”你？</p>
+<p>-&gt; 谁来负责？用户、平台还是立法机构？</p>
+<h3 id="summary-1">Summary</h3>
+<ol type="1">
+<li>用户可能无意中上传他人信息 Users may accidentally upload other
+people’s information</li>
+<li>模型内部可能含有未经授权的公共/私有素材 Unauthorized public/private
+material</li>
+<li>一旦训练完毕，很难“删除”个人痕迹 It’s hard to “delete” personal
+traces</li>
+<li>传统法律对“持续学习系统”不适用 -&gt; accountability</li>
+</ol>
+<h2 id="case-study-你的数据是否比你活得更久">Case Study:
+你的数据是否比你活得更久？</h2>
+<h3
+id="平台对这些数据是否有义务永久保存">平台对这些“数据”是否有义务永久保存？</h3>
+<p>想象你和朋友在 Facebook 上经营一个成功的公益组织，为流浪者提供超
+10,000 份食物。突然，Meta 为了削减成本关闭所有社区主页。</p>
+<p>-&gt;
+平台提供技术工具，但内容/组织归用户所有？如果平台任意删除，是否合理？</p>
+<h3 id="数据的人性化权利是否重要">数据的“人性化权利”是否重要？</h3>
+<p>德国某用户去世，父母请求获取其 Facebook 账号中的记录。Facebook
+提供了所有数据，但形式<strong>非常不人性化</strong>（密密麻麻、不可读、缺乏结构）</p>
+<p>-&gt; 在死亡后，数据是否应当转化为<strong>数字遗产（digital
+legacy）</strong>而非商品/记录？</p>
+<h3 id="数据永生的悖论">数据“永生”的悖论</h3>
+<p>What happens to your data when you die? Who decides what happens? Can
+it be deleted? Should it be preserved?</p>
+<hr />
+<h2 id="case-study-data-governance-data-release-and-privacy-issues">Case
+Study: <em>Data Governance, Data Release, and Privacy Issues</em></h2>
+<h3 id="背景澳大利亚-myki-数据集匿名化失败事件">背景：澳大利亚 Myki
+数据集匿名化失败事件</h3>
+<ul>
+<li>政府发布了公交刷卡记录数据（没有姓名、地址）</li>
+<li>研究者发现，仅凭时间+路线+频率信息，就能<strong>重建个人行程轨迹</strong>，并最终推断出身份</li>
+</ul>
+<h3 id="为什么这不是真正的匿名">为什么这不是真正的“匿名”？</h3>
+<ul>
+<li><strong>De-identification（去标识）</strong>：移除直接身份信息（如姓名、ID）</li>
+<li><strong>Re-identification（再识别）</strong>：通过关联外部数据（如社交媒体、公开记录）推断身份</li>
+<li>结论：<strong>Anonymization =
+一个强假设，无法简单通过删字段实现</strong></li>
+</ul>
+<h3 id="伦理反思数据公开是否值得">伦理反思：数据公开是否值得？</h3>
+<ul>
+<li>数据开放对研究、商业、交通优化非常有价值</li>
+<li>但如果隐私保护不充分，将导致：
+<ul>
+<li>个人信息泄露</li>
+<li>社会信任受损</li>
+<li>政府/机构被起诉或公信力下降</li>
+</ul></li>
+</ul>
+<h3
+id="数据治理的真正难题风险不可预测">数据治理的真正难题：风险不可预测</h3>
+<ul>
+<li>Anonymization不是“一劳永逸”</li>
+<li>你无法预测几年后有哪些新数据源可用于Re-identification</li>
+<li>技术进步会反过来削弱你过去认为“安全”的处理方式</li>
+</ul>
+<h2 id="mind-map">Mind Map</h2>
+<ol type="1">
+<li><p><strong>Define the concept of data governance from an
+organisational perspective.</strong></p>
+<ul>
+<li>Data governance is the set of policies, processes, and
+responsibilities that organisations use to <strong>ensure the ethical,
+secure, and lawful management of data</strong> throughout its lifecycle.
+This includes who can access data, how it’s stored, shared, deleted, and
+how compliance is maintained.</li>
+<li>数据治理是指组织内部制定的一系列<strong>政策、流程与责任划分机制</strong>，其目标是在整个数据生命周期中确保数据的<strong>安全性、合法性与伦理性</strong>。
+它涵盖内容包括：谁能访问数据、数据如何存储/共享/删除，以及如何符合法律法规（如
+GDPR）的要求。</li>
+</ul></li>
+<li><p><strong>Understand how laws such as the famous GDPR (EU) help
+protect users.</strong></p>
+<ul>
+<li><p>The GDPR enforces strict principles such as <strong>informed
+consent</strong>, <strong>right of access</strong>, <strong>data breach
+notification</strong>, and <strong>right to explanation</strong>,
+requiring organisations to be transparent and accountable. It applies to
+any organisation processing EU residents’ data, regardless of
+location.</p></li>
+<li><p>GDPR 强调用户的核心数据权利，例如：</p>
+<ul>
+<li>明确同意权（consent）</li>
+<li>数据访问权（access）</li>
+<li>数据泄露通报义务（breach notification）</li>
+<li>算法决策解释权（right to explanation）</li>
+</ul>
+<p>它要求组织必须<strong>透明处理数据、对用户负责</strong>。即使公司不在欧盟，只要处理了欧盟居民数据，就必须遵守此法。</p></li>
+</ul></li>
+<li><p><strong>Discover how your data is stored and managed by the
+organisations you entrust them with (and also organisations you never
+knew had access to), as well as your rights.</strong></p>
+<ul>
+<li><p>Your data is often shared, stored, and reused by both
+<strong>known and unknown third parties</strong> through tracking
+technologies (e.g., cookies, pixels). You have the right to <strong>know
+what data is collected</strong>, <strong>how it’s used</strong>, and
+<strong>request its deletion or correction</strong>, but platforms often
+obscure this.</p></li>
+<li><p>你主动提供的数据（如注册信息）和被动生成的数据（如浏览记录）都可能被机构<strong>存储、共享、甚至出售给你不知道的第三方</strong>。<a
+href="#law:%20gdpr">你拥有以下权利</a>：</p>
+<ul>
+<li>知情权（你的数据如何被收集与使用）</li>
+<li>访问权（查看所持数据副本）</li>
+<li>删除或更正权（请求更改错误数据）</li>
+</ul>
+<p>但现实中很多平台对这些信息进行了技术性隐藏，<strong>用户很难真正掌握主动权</strong>。</p></li>
+</ul></li>
+<li><p><strong>Critically evaluate processing (e.g., generative AI) and
+storage practices on large amounts of data (guided by two case
+studies).</strong></p>
+<ul>
+<li>Case studies like ChatGPT prompts and Myki transport data show that:
+<ul>
+<li>Generative AI can <strong>inadvertently capture and leak third-party
+information</strong>, challenging consent and ownership norms.</li>
+<li>“De-identified” data can still be <strong>re-identified</strong>
+through cross-referencing, questioning the safety of open data
+practices. Both cases urge us to reconsider <strong>data permanence,
+accountability, and ethical safeguards</strong> in a world of AI and
+large-scale analytics.</li>
+</ul></li>
+<li>生成式 AI 和开放数据案例揭示了两个核心风险：
+<ol type="1">
+<li>你向 ChatGPT
+提问时，可能<strong>无意上传他人隐私信息</strong>，但平台可能将其永久用于训练
+→ 触发伦理与同意问题</li>
+<li>如 Myki
+公交数据，即使去标识了姓名，用户仍然可能被<strong>再识别</strong> →
+匿名化不能保证隐私</li>
+</ol></li>
+</ul></li>
+</ol>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>

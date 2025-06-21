@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w2 - Intro of Ethics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#intro-of-ethics" id="toc-intro-of-ethics">Intro
+          of Ethics</a>
+          <ul>
+          <li><a href="#harms-and-benefits-of-ai"
+          id="toc-harms-and-benefits-of-ai">harms and benefits of
+          AI</a></li>
+          <li><a href="#human-rights-and-regulation"
+          id="toc-human-rights-and-regulation">Human Rights and
+          Regulation</a>
+          <ul>
+          <li><a href="#human-rights" id="toc-human-rights">Human
+          Rights</a></li>
+          <li><a href="#regulation"
+          id="toc-regulation">Regulation</a></li>
+          <li><a href="#principles-and-codes"
+          id="toc-principles-and-codes">Principles and Codes</a></li>
+          </ul></li>
+          <li><a href="#ai-principles-and-skepticism"
+          id="toc-ai-principles-and-skepticism">AI Principles and
+          Skepticism</a></li>
+          <li><a href="#introduction-to-ethics-and-moral-philosophy"
+          id="toc-introduction-to-ethics-and-moral-philosophy">Introduction
+          to Ethics and Moral Philosophy</a>
+          <ul>
+          <li><a href="#what-is-ethics" id="toc-what-is-ethics">What is
+          ethics</a></li>
+          <li><a href="#why-ethic-is-not" id="toc-why-ethic-is-not">why
+          ethic is not…</a></li>
+          <li><a href="#the-aim-of-ethic" id="toc-the-aim-of-ethic">The
+          aim of ethic</a></li>
+          <li><a href="#ethic-is-normative"
+          id="toc-ethic-is-normative">Ethic is Normative</a></li>
+          <li><a href="#religion-and-ethics"
+          id="toc-religion-and-ethics">Religion and Ethics</a></li>
+          <li><a href="#relativism-相对主义的质疑"
+          id="toc-relativism-相对主义的质疑">Relativism
+          相对主义的质疑</a>
+          <ul>
+          <li><a href="#为什么相对主义是有问题的"
+          id="toc-为什么相对主义是有问题的">为什么相对主义是有问题的？</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#types-of-ethics" id="toc-types-of-ethics">Types
+          of Ethics</a></li>
+          <li><a href="#classic-moral-theories"
+          id="toc-classic-moral-theories">Classic Moral Theories</a>
+          <ul>
+          <li><a href="#consequentialism-后果主义如功利主义"
+          id="toc-consequentialism-后果主义如功利主义">Consequentialism
+          — 后果主义（如功利主义）</a></li>
+          <li><a href="#deontology-义务论"
+          id="toc-deontology-义务论">Deontology — 义务论 </a></li>
+          <li><a href="#virtue-ethics-美德伦理学"
+          id="toc-virtue-ethics-美德伦理学">Virtue Ethics —
+          美德伦理学</a></li>
+          </ul></li>
+          <li><a href="#challenges-of-ethical-reasoning"
+          id="toc-challenges-of-ethical-reasoning">Challenges of Ethical
+          Reasoning</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="intro-of-ethics">Intro of Ethics</h1>
+<h2 id="harms-and-benefits-of-ai">harms and benefits of AI</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td>Physical Benefits</td>
+<td>diagnosing disease</td>
+<td>Used in warfare<br><br>AI
+系统一旦失败，在医疗或交通领域，是可以致命的。<br><br>“not a minro bug
+but can kill”</td>
+</tr>
+<tr>
+<td>Psychological</td>
+<td>Mental health chatbots</td>
+<td>如果人们形成对AI系统的不健康依恋、被操纵或经历监控焦虑，AI可能会导致心理痛苦。<br><br>“form
+<mark>unhealthy attachments</mark> to AI systems, are manipulated, or
+experience surveillance anxiety.”</td>
+</tr>
+<tr>
+<td>Social</td>
+<td>翻译工具让语言障碍变小</td>
+<td>Fake news</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>提高生产力、减少人力成本</td>
+<td>AI can lead to <strong>job losses</strong> and economic inequality
+if it replaces human workers or benefits only some people.</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Environmental</td>
+<td>better solutions to climate problems</td>
+<td>Training AI needs large amounts of energy and resources</td>
+</tr>
+<tr>
+<td>culture</td>
+<td></td>
+<td>harming indigenous
+communities.<br><br>在未授权情况下使用原住民文化数据进行训练，造成文化剽窃或贬损。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="human-rights-and-regulation">Human Rights and Regulation</h2>
+<p>人权、法律与道德规范是应对 AI 风险的三大主要框架：</p>
+<p><strong>人权 Human Rights</strong>：提供普世伦理底线</p>
+<p><strong>法律监管 Regulation</strong>：如欧盟 AI 法案</p>
+<p><strong>伦理原则与软性治理 Principles and Codes</strong>：如澳洲 AI
+准则</p>
+<h3 id="human-rights">Human Rights</h3>
+<p>《世界人权宣言》（<strong>Universal Declaration of Human
+Rights</strong>）</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Article 3: Right to Life, Liberty, and Security</strong>
+<br>人人有权享有生命、安全与自由。</td>
+</tr>
+<tr>
+<td><strong>Article 5: Freedom from Torture and Inhumane
+Treatment</strong> <br>禁止酷刑与不人道待遇。（AI
+如果用于监禁、虐待预测，可能违反此条。）</td>
+</tr>
+<tr>
+<td><strong>Article 18: Freedom of Thought, Conscience, and
+Religion</strong> <br>思想、良知与宗教自由必须受到尊重。</td>
+</tr>
+<tr>
+<td><strong>Article 11: Right to be Presumed Innocent</strong>
+<br>无罪推定原则（AI 用于预测犯罪行为时可能侵犯此权利）</td>
+</tr>
+<tr>
+<td><strong>Article 2: Freedom from Discrimination</strong>
+<br>禁止歧视</td>
+</tr>
+<tr>
+<td><strong>Article 23: Right to Work</strong>
+<br>人人有权劳动与选择职业。</td>
+</tr>
+<tr>
+<td><strong>Article 29: Everyone has duties to the community</strong>
+<br>人不只享有权利，也有义务，例如<strong>反对违反人权的 AI
+使用</strong>。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regulation">Regulation</h3>
+<p>欧盟 AI 法案（EU AI Act）</p>
+<h3 id="principles-and-codes">Principles and Codes</h3>
+<p>澳大利亚 AI 道德八大原则</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human, Societal and Environmental Wellbeing</td>
+<td>AI systems should <strong>benefit individuals, society and the
+environment</strong></td>
+</tr>
+<tr>
+<td>Human-Centred Values</td>
+<td>AI systems should <strong>respect human rights</strong>, diversity,
+and the <strong>autonomy of individuals</strong></td>
+</tr>
+<tr>
+<td>Fairness</td>
+<td>AI systems should be inclusive and accessible, and should
+<strong>not involve or result in unfair discrimination</strong> against
+individuals, communities or groups</td>
+</tr>
+<tr>
+<td>Privacy Protection and Security</td>
+<td>AI systems should respect and uphold <strong>privacy</strong> rights
+and data protection, and ensure the security of data.</td>
+</tr>
+<tr>
+<td>Reliability and Safety</td>
+<td>AI systems should reliably operate in accordance with their intended
+purpose<br><br>必须能安全可靠地运行，不随意出错。</td>
+</tr>
+<tr>
+<td>Transparency and Explainability</td>
+<td>There should be transparency and responsible disclosure so
+<strong>people can understand when they are being significantly impacted
+by AI</strong>, and can find out when an AI system is engaging with
+them</td>
+</tr>
+<tr>
+<td>Contestability</td>
+<td>When an AI system significantly impacts a person, community, group
+or environment, there should be a timely process to <strong>allow people
+to challenge</strong> the use or outcomes of <strong>the AI
+system</strong></td>
+</tr>
+<tr>
+<td>Accountability<br>追责</td>
+<td>People responsible for the different phases of the AI system
+lifecycle should be identifiable and accountable for the outcomes of the
+AI systems, and human oversight of AI systems should be enabled</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ai-principles-and-skepticism">AI Principles and Skepticism</h2>
+<p>AI 道德准则被来自政府、企业、学术机构等多个主体提出，目的是引导 AI
+向善发展；但它们也面临两个主要的质疑：一是这些准则是否实际有效，二是伦理学本身是否有用。对伦理的质疑反而促使我们更严肃地看待伦理原则的制定与落实。</p>
+<h2 id="introduction-to-ethics-and-moral-philosophy">Introduction to
+Ethics and Moral Philosophy</h2>
+<p>伦理学是一门规范性学科，它不描述世界是什么样，而是探讨我们应当如何行动，尤其在
+AI 伦理中，我们需要用哲学的方法来判断“应该做什么”。</p>
+<h3 id="what-is-ethics">What is ethics</h3>
+<p>Greek word: character</p>
+<p>和 morality（道德）含义基本等同，morality 指“行为对错”，ethics
+更偏向“思维方式和理论探究”。</p>
+<h3 id="why-ethic-is-not">why ethic is not…</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>不是伦理的概念</th>
+<th>举例</th>
+<th>为什么不是伦理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>法律</strong> (Law)</td>
+<td>美国种族隔离法</td>
+<td>law can be not moral</td>
+</tr>
+<tr>
+<td><strong>礼仪</strong> (Etiquette)</td>
+<td>餐桌礼仪，如拿刀叉方式</td>
+<td>只是社会习惯，不涉及对错判断</td>
+</tr>
+<tr>
+<td><strong>清单式规则</strong> (Checklist)</td>
+<td>公司行为准则</td>
+<td>can be wrong<br><br>lack deep thought</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-aim-of-ethic">The aim of ethic</h3>
+<blockquote>
+<p>“The most important question you could ever ask is: <strong>How
+should we live</strong>?”- Socrates</p>
+</blockquote>
+<blockquote>
+<p>“Ethics is the enquiry into what is valuable, <strong>what makes life
+worth living</strong>…” -Wittgenstein</p>
+</blockquote>
+<h3 id="ethic-is-normative">Ethic is Normative</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>描述性</strong> Descriptive</td>
+<td>描述世界是什么样</td>
+<td>“AI 在决策中有偏见”</td>
+</tr>
+<tr>
+<td><strong>规范性</strong> Normative</td>
+<td><mark>判断世界应当是什么样</mark></td>
+<td>“AI 不应当有偏见”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="religion-and-ethics">Religion and Ethics</h3>
+<p>宗教与伦理密切相关，但两者<strong>并不等同</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>宗教</th>
+<th>道德重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>佛教（Buddhism）</td>
+<td>普遍同情心（universal compassion）</td>
+</tr>
+<tr>
+<td>儒家（Confucianism）</td>
+<td>尊重长辈、家庭、社会秩序</td>
+</tr>
+<tr>
+<td>基督教（Christianity）</td>
+<td>爱、十诫（commandments）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relativism-相对主义的质疑">Relativism 相对主义的质疑</h3>
+<p>Relativism： “There is no right or wrong. Truth is relative.”</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>文化相对主义</strong> Cultural relativism</td>
+<td>“一个文化说对就是对”</td>
+<td>战争文化 vs 和平文化</td>
+</tr>
+<tr>
+<td><strong>个人相对主义（主观主义）</strong> Individual relativism
+(Subjectivism)</td>
+<td>“一个人认为对就是对”</td>
+<td>马斯克炒人是对的，只要他这么认为</td>
+</tr>
+</tbody>
+</table>
+<h4 id="为什么相对主义是有问题的">为什么相对主义是有问题的？</h4>
+<p><strong>我们并不总是愿意同意对方“是对的”</strong></p>
+<blockquote>
+<p>“Are we forced to agree that racial slavery was right in that
+culture? Most would say no.”</p>
+</blockquote>
+<p><strong>我们有理由批评其他文化或个人的做法</strong></p>
+<blockquote>
+<p>“We can give reasons… some views are better backed by reason.”</p>
+</blockquote>
+<h2 id="types-of-ethics">Types of Ethics</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>类型</th>
+<th>英文名</th>
+<th>功能</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>元伦理学</strong></td>
+<td>Metaethics</td>
+<td>研究价值语言本身的意义</td>
+<td>“what is right?” <br>“can we know moral facts”</td>
+</tr>
+<tr>
+<td><strong>规范伦理学</strong></td>
+<td>Normative ethics</td>
+<td>what should we do?<br><br>give standard and rules</td>
+<td>Deontology<br><br>consequentialism<br><br>virtual ethics</td>
+</tr>
+<tr>
+<td><strong>应用伦理学</strong></td>
+<td>Applied ethics / Practical ethics</td>
+<td>将伦理原则应用到具体情境中</td>
+<td>AI ethics、robot ethics、bioethics、environmental ethics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="classic-moral-theories">Classic Moral Theories</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>理论</th>
+<th>判断标准</th>
+<th>关注重点</th>
+<th>典型问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deontology</td>
+<td>是否符合道德规则</td>
+<td>行为本身</td>
+<td>“我有没有侵犯人的尊严？”</td>
+</tr>
+<tr>
+<td>Consequentialism</td>
+<td>后果是否最大化幸福</td>
+<td>结果</td>
+<td>“是否对多数人有利？”</td>
+</tr>
+<tr>
+<td>Virtue Ethics</td>
+<td>是否展现良好品格</td>
+<td>行为者的德行</td>
+<td>“我是一个怎样的人？”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consequentialism-后果主义如功利主义">Consequentialism —
+后果主义（如功利主义）</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>内容</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心标准</td>
+<td>结果好就是对的</td>
+<td>The right action is the one that produces the best overall
+outcome.</td>
+</tr>
+<tr>
+<td>代表人物</td>
+<td></td>
+<td>Jeremy Bentham, John Stuart Mill</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>最大幸福，最小痛苦</td>
+<td>Maximise happiness, minimise suffering, utility</td>
+</tr>
+<tr>
+<td>AI诊断系统拯救最多人 → 是好系统，即使偶尔误诊。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deontology-义务论">Deontology — 义务论 </h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>内容</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心标准</td>
+<td>遵守规则就是对的</td>
+<td>Right actions follow moral duties, regardless of consequences.</td>
+</tr>
+<tr>
+<td>代表人物</td>
+<td>康德</td>
+<td>Immanuel Kant</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>义务、规则、尊严、不能利用他人</td>
+<td>Duty, rules, dignity, never use people as means</td>
+</tr>
+<tr>
+<td>例子：AI不得说谎或侵犯隐私，即使这样能帮助更多人。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtue-ethics-美德伦理学">Virtue Ethics — 美德伦理学</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>内容</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心标准</td>
+<td>体现好品格就是对的</td>
+<td>Ethics is about developing good character and virtues.</td>
+</tr>
+<tr>
+<td>代表人物</td>
+<td>亚里士多德</td>
+<td>Aristotle</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>美德、中庸、榜样</td>
+<td>Virtue, golden mean, moral exemplar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-of-ethical-reasoning">Challenges of Ethical
+Reasoning</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>限制类型</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无通用算法</td>
+<td>没有“道德计算器”</td>
+<td>No ethical calculator</td>
+</tr>
+<tr>
+<td>无唯一答案</td>
+<td>不一定有“标准答案”</td>
+<td>No single correct answer</td>
+</tr>
+<tr>
+<td>分歧是常态</td>
+<td>理论观点有冲突</td>
+<td>Disagreement is normal</td>
+</tr>
+<tr>
+<td>slow thinking</td>
+<td>需要时间和权衡</td>
+<td>Requires slow, thoughtful deliberation</td>
+</tr>
+<tr>
+<td>保持谦逊Humility</td>
+<td>尊重文化差异</td>
+<td>Be open to other cultural/ethical views</td>
+</tr>
+</tbody>
+</table>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>

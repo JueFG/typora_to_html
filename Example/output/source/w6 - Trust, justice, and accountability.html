@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w6 - Trust, justice, and accountability</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#trust-justice-and-accountability"
+          id="toc-trust-justice-and-accountability">Trust, Justice and
+          ACCOUNTABILITY</a>
+          <ul>
+          <li><a href="#why-trust-important"
+          id="toc-why-trust-important">Why Trust Important?</a></li>
+          <li><a href="#什么构成信任"
+          id="toc-什么构成信任">什么构成信任？</a></li>
+          <li><a href="#trust-distrust-lack-of-trust"
+          id="toc-trust-distrust-lack-of-trust">Trust &amp; Distrust
+          &amp; Lack of trust</a>
+          <ul>
+          <li><a href="#信任trust" id="toc-信任trust">1.
+          <strong>信任（Trust）</strong></a></li>
+          <li><a href="#不信任distrust" id="toc-不信任distrust">2.
+          <strong>不信任（Distrust）</strong></a></li>
+          <li><a href="#缺乏信任lack-of-trust"
+          id="toc-缺乏信任lack-of-trust">3. <strong>缺乏信任（Lack of
+          trust）</strong></a></li>
+          </ul></li>
+          <li><a href="#contractual-trust-local-trust"
+          id="toc-contractual-trust-local-trust">Contractual Trust
+          (Local Trust)</a>
+          <ul>
+          <li><a href="#contractual-trust-example"
+          id="toc-contractual-trust-example">Contractual Trust
+          Example</a></li>
+          </ul></li>
+          <li><a href="#trust-vs-trustworthiness"
+          id="toc-trust-vs-trustworthiness">Trust vs
+          Trustworthiness</a></li>
+          <li><a href="#use-misuse-disuse-abuse"
+          id="toc-use-misuse-disuse-abuse">Use / Misuse / Disuse /
+          Abuse</a>
+          <ul>
+          <li><a href="#misuse误用" id="toc-misuse误用">1.
+          Misuse（误用）</a></li>
+          <li><a href="#disuse弃用" id="toc-disuse弃用">2.
+          Disuse（弃用）</a></li>
+          <li><a href="#abuse滥用" id="toc-abuse滥用">3.
+          Abuse（滥用）</a></li>
+          <li><a href="#真实案例分析therac-25trac-25"
+          id="toc-真实案例分析therac-25trac-25">真实案例分析：Therac-25（TRAC-25）</a></li>
+          </ul></li>
+          <li><a href="#power" id="toc-power">Power</a>
+          <ul>
+          <li><a href="#what-is-power" id="toc-what-is-power">What is
+          Power</a></li>
+          <li><a href="#methods-four-red-flags"
+          id="toc-methods-four-red-flags">Methods: Four Red Flags</a>
+          <ul>
+          <li><a href="#是否存在权力不对称"
+          id="toc-是否存在权力不对称">1. 是否存在权力不对称？</a></li>
+          <li><a href="#决策者是否不受系统影响"
+          id="toc-决策者是否不受系统影响">2.
+          决策者是否不受系统影响？</a></li>
+          <li><a href="#是否不信任ai"
+          id="toc-是否不信任ai">3.是否不信任AI？</a></li>
+          <li><a href="#决策者是否愿意自己也被该系统评估"
+          id="toc-决策者是否愿意自己也被该系统评估">4.
+          决策者是否愿意自己也被该系统评估？</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#真实案例分析compas"
+          id="toc-真实案例分析compas">真实案例分析：COMPAS</a>
+          <ul>
+          <li><a href="#系统背景" id="toc-系统背景">1. 系统背景</a></li>
+          <li><a href="#偏见问题曝光" id="toc-偏见问题曝光">2.
+          偏见问题曝光</a></li>
+          <li><a href="#ai公司的辩护" id="toc-ai公司的辩护">3.
+          AI公司的辩护</a></li>
+          </ul></li>
+          <li><a href="#justice-and-fairness"
+          id="toc-justice-and-fairness">Justice And Fairness</a>
+          <ul>
+          <li><a href="#definition" id="toc-definition">1.
+          Definition</a></li>
+          <li><a href="#variety-on-ethic-theory"
+          id="toc-variety-on-ethic-theory">2. Variety on ethic
+          theory</a></li>
+          <li><a href="#impossibility-theorem-不可能定理"
+          id="toc-impossibility-theorem-不可能定理">3. Impossibility
+          Theorem 不可能定理</a></li>
+          <li><a href="#fairness-vs-performance-trade-off"
+          id="toc-fairness-vs-performance-trade-off">4. Fairness vs
+          Performance Trade-off</a></li>
+          </ul></li>
+          <li><a href="#accountability"
+          id="toc-accountability">Accountability</a>
+          <ul>
+          <li><a href="#what-is-accountability"
+          id="toc-what-is-accountability">1. What is Accountability</a>
+          <ul>
+          <li><a href="#预防prevention" id="toc-预防prevention">1.
+          <strong>预防</strong>（Prevention）</a></li>
+          <li><a href="#回应与干预addressing"
+          id="toc-回应与干预addressing">2.
+          <strong>回应与干预</strong>（Addressing）</a></li>
+          <li><a href="#建立制度机制having-mechanisms"
+          id="toc-建立制度机制having-mechanisms">3.
+          <strong>建立制度机制</strong>（Having mechanisms）</a></li>
+          </ul></li>
+          <li><a href="#transparency" id="toc-transparency">2.
+          Transparency</a></li>
+          <li><a href="#back-to-thorac-25" id="toc-back-to-thorac-25">3.
+          Back to Thorac-25</a></li>
+          <li><a href="#responsibility-gap"
+          id="toc-responsibility-gap">4. Responsibility Gap</a></li>
+          <li><a href="#moral-crumple-zone-替罪羊"
+          id="toc-moral-crumple-zone-替罪羊">5. Moral Crumple Zone
+          替罪羊</a></li>
+          <li><a href="#procedural-justice-wong-afr-model"
+          id="toc-procedural-justice-wong-afr-model">6. Procedural
+          Justice: Wong AFR Model</a>
+          <ul>
+          <li><a href="#问责如何实现wong-afr-model"
+          id="toc-问责如何实现wong-afr-model">问责如何实现？Wong AFR
+          MODEL</a></li>
+          <li><a href="#example" id="toc-example">Example</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#mind-map" id="toc-mind-map">Mind Map</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="trust-justice-and-accountability">Trust, Justice and
+ACCOUNTABILITY</h1>
+<p>信任（trust）在AI伦理中是核心前提，它决定了人们是否愿意使用AI、在什么条件下使用，并影响了AI使用过程中的道德风险和责任归属。</p>
+<h2 id="why-trust-important">Why Trust Important?</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>“信任让我们可以预测他人行为，从而促进协作。”</p>
+<p>-&gt; <mark style="background-color: #90ee90;"> predictability,
+enable collaboration</mark></p>
+</blockquote>
+<ul>
+<li>Trust btw
+people：信任意味着我可以预测你是否会害我、是否会履行承诺。基于这种预测，我们可以共同完成任务或建立长期关系。</li>
+<li>Trust btw human and
+machine：虽然AI不是人，但我们也需要能“预测它的行为”，例如它如何处理数据、如何做出推荐或判断，这样我们才能放心地与它“协作”。</li>
+</ul>
+<h2 id="什么构成信任">什么构成信任？</h2>
+<p>讲者提出了一种“信任三要素模型”，在人与人之间是这样的：</p>
+<ul>
+<li>A相信B会以A的利益为先；will act in A’s best interests</li>
+<li>A愿意在B面前暴露自己的脆弱性（愿意承担B可能会伤害自己的风险）；accept
+vulnerability</li>
+<li>预期他人决策会对我产生怎样影响。信任也意味着相信对方在做决策时会顾及到我。这种信任有利于双方达成合作。anticipate
+the impact of M’s decision, enabling collaboration.</li>
+</ul>
+<p>这套模型可以应用到<strong>人-机信任</strong>中：</p>
+<blockquote>
+<p>“H trusts M (human trusts machine) if H believes that M will act in
+H’s best interests, and H accepts vulnerability to M’s actions.”</p>
+<p>“如果 H 认为 M 会按照 H 的最佳利益行事，并且 H 接受暴露脆弱，那么 H
+就会信任 M（人类信任机器）。”</p>
+</blockquote>
+<hr />
+<h2 id="trust-distrust-lack-of-trust">Trust &amp; Distrust &amp; Lack of
+trust</h2>
+<p>讲者特别强调要区分这三种状态：</p>
+<h3 id="信任trust">1. <strong>信任（Trust）</strong></h3>
+<p>相信系统会以我的利益为先，并愿意承担由此带来的风险（如接受AI作出的推荐）。</p>
+<blockquote>
+<p>H believes M will act against H’s best interests</p>
+</blockquote>
+<h3 id="不信任distrust">2. <strong>不信任（Distrust）</strong></h3>
+<p>明确认为系统会对我有害，所以我拒绝使用它。</p>
+<blockquote>
+<p>“If H believes M will act against H’s best interests, that is
+distrust.”</p>
+<p>“如果 H 认为 M 的行为会违背 H 的最大利益，那就是不信任。”</p>
+</blockquote>
+<h3 id="缺乏信任lack-of-trust">3. <strong>缺乏信任（Lack of
+trust）</strong></h3>
+<p>对系统没有任何信念 ——
+不知道它是否有用或有害，因此不愿意接受它的控制。</p>
+<blockquote>
+<p>“If I don’t know what this machine will do, I might not distrust it,
+but I still won’t trust it.”</p>
+<p>“如果我不知道这台机器会做什么，我可能会信任它，但我仍然不会信任它。”</p>
+</blockquote>
+<h2 id="contractual-trust-local-trust">Contractual Trust (Local
+Trust)</h2>
+<p>这是更精细的信任模型，强调“只在特定情境中信任机器完成某项任务,
+而不是全面的信任”：</p>
+<ul>
+<li>行人信任司机：只信他“不会压我”，而不是信任他能做任何事情（比如开好车、当好医生等）。</li>
+</ul>
+<blockquote>
+<p>“Trust is contextual. You may trust a machine to do one thing, not
+others it is capable of.”</p>
+<p>“信任是情境决定的。你可以相信一台机器会做一件事，而不是它能做的其他事情。</p>
+</blockquote>
+<p>这是现实中 AI
+常见的信任方式：我们信任它完成某项特定任务（如语音识别、风险评分），但未必信任它做其他判断（如道德选择）。</p>
+<hr />
+<h3 id="contractual-trust-example">Contractual Trust Example</h3>
+<p>我们可能会“信任”AI的多个方面，例如：</p>
+<ul>
+<li><strong>准确性</strong>（accurate decisions）</li>
+<li><strong>无偏见</strong>（non-discriminatory outputs）</li>
+<li><strong>数据安全</strong>（data won’t be leaked）</li>
+<li>…</li>
+</ul>
+<p>不同用户可能信任 AI 不同的“维度”，这也是信任多样性的体现。</p>
+<h2 id="trust-vs-trustworthiness">Trust vs Trustworthiness</h2>
+<p>Trust != trustworthiness</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信任（Trust）</td>
+<td><strong>主观地</strong>相信它做正确的事</td>
+</tr>
+<tr>
+<td>可信（Trustworthiness）</td>
+<td>机器是否<strong>客观上</strong>真的值得信任</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>AI是否可信<br />Trustworthiness</th>
+<th>你是否信任<br />Trust</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>✅ （Warranted Trust）</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>❌ （Unwarranted Distrust）</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>❌ （Unwarranted Trust）</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>✅ （Warranted Distrust）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-misuse-disuse-abuse">Use / Misuse / Disuse / Abuse</h2>
+<h3 id="misuse误用">1. Misuse（误用）</h3>
+<ul>
+<li>Using a M which should not be used 用了不该用的系统</li>
+<li><mark>Unwarranted Trust</mark></li>
+<li>e.g., automation bias, decision bias, monitoring error,
+over-reliance</li>
+<li>Complacency 自满</li>
+</ul>
+<h3 id="disuse弃用">2. Disuse（弃用）</h3>
+<ul>
+<li>Not using a M which should be used 拒绝使用本应使用的系统</li>
+<li><mark>Unwarranted Distrust</mark></li>
+<li>E.g.,
+核电站监控系统过于敏感，导致工作人员习惯性忽略警报，错过真实风险。monitoring
+error</li>
+</ul>
+<h3 id="abuse滥用">3. Abuse（滥用）</h3>
+<ul>
+<li>Deploying automation when it should not be used
+系统本身不值得信任，却被开发者部署</li>
+<li><mark>Unwarranted Distrust (distrust human operators)</mark>
+错误地不信任人类能完成某些任务</li>
+<li>Automation bias
+<ul>
+<li>设计者（或组织）偏向相信自动化系统一定比人类更准。</li>
+</ul></li>
+<li>Arrogance 傲慢
+<ul>
+<li>有些设计者认为自己设计的系统“完美无缺”，从而忽视人的作用和反馈。</li>
+</ul></li>
+<li>Impacts：Mismatch in human-automation interface
+<ul>
+<li>人类和自动化系统之间的协作失败</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="真实案例分析therac-25trac-25">真实案例分析：Therac-25（TRAC-25）</h3>
+<ul>
+<li>放疗设备升级后<strong>移除硬件锁</strong>，由软件控制放射剂量；</li>
+<li><strong>用户对机器过度信任</strong>，忽略了复杂且不易理解的错误提示；</li>
+<li>最终多名病人遭受放射过量，导致死亡和组织坏死。</li>
+</ul>
+<p><strong>分析：</strong></p>
+<ul>
+<li>Misuse: patients unwarranted trust from M (用了不该用的系统)</li>
+<li>Disuse: Hardware locks removed</li>
+<li>Abuse: Minimal input from radiographers 放射技师的最少输入
+(系统过度自动化，几乎不让人参与或干预)</li>
+</ul>
+<hr />
+<h2 id="power">Power</h2>
+<blockquote>
+<p>“In many AI scenarios, people are <strong>forced</strong> to use
+systems they <strong>don’t trust</strong>, due to power
+asymmetries.”</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]</p>
+<p>“在许多 AI
+场景中，由于power不对称，人们<strong>被迫</strong>使用他们<strong>不信任的系统</strong>
+。”</p>
+</blockquote>
+<h3 id="what-is-power">What is Power</h3>
+<blockquote>
+<p>“Power is the ability to control our circumstances… including power
+over others.”</p>
+</blockquote>
+<p>权力是控制我们环境的能力……包括对他人的权力。</p>
+<p>他强调：</p>
+<ul>
+<li>权力并不只是“身体暴力”（brute force），</li>
+<li>还包括<strong>信息控制</strong>（knowledge is
+power）和<strong>心理操控</strong>（manipulation）等非物理的影响形式。</li>
+</ul>
+<p>AI 系统中的权力常体现在：</p>
+<ul>
+<li>谁决定系统部署？（设计者、政府、公司）</li>
+<li>谁被迫接受？（普通用户、被判决人等）</li>
+</ul>
+<h3 id="methods-four-red-flags">Methods: Four Red Flags</h3>
+<p>每当AI系统被用来影响人们命运（如：判刑、贷款、社保），我们必须思考以下四个伦理问题：</p>
+<h4 id="是否存在权力不对称">1. 是否存在权力不对称？</h4>
+<blockquote>
+<p>“Does the decision maker have power over the subject?”
+法官决定是否用AI判刑，被告无法反对 → ✔️ 有权力不对称。</p>
+</blockquote>
+<h4 id="决策者是否不受系统影响">2. 决策者是否不受系统影响？</h4>
+<blockquote>
+<p>“Does the decision maker have little or no vulnerability from that
+system?”“决策者在那个系统中是否几乎没有风险？”
+法官和系统供应商不会坐牢，Walter Davis 才会 → ✔️ 缺乏对等风险。</p>
+</blockquote>
+<h4 id="是否不信任ai">3.是否不信任AI？</h4>
+<blockquote>
+<p>“Does the subject distrust the AI?” 被告 Walter 明确反对 AI
+参与决定。</p>
+</blockquote>
+<h4 id="决策者是否愿意自己也被该系统评估">4.
+决策者是否愿意自己也被该系统评估？</h4>
+<blockquote>
+<p>“Would you accept the AI being used on yourself?”“你会接受 AI
+被用在你自己身上吗？” 如果连法官自己都不愿接受 AI 决定判刑 → ✔️ 不可接受
+→ red flag！</p>
+</blockquote>
+<p>讲者说：</p>
+<blockquote>
+<p>“The fact that a red flag has come up doesn’t necessarily mean the
+use of the AI is wrong… But it does mean we have to think about it.”</p>
+<p>“red flag出现的事实并不一定意味着使用 AI
+是错误的……但这确实意味着我们必须考虑它。</p>
+</blockquote>
+<hr />
+<h2 id="真实案例分析compas">真实案例分析：COMPAS</h2>
+<p><strong>COMPAS</strong>
+是美国法院系统中使用的“再犯风险评估系统”。</p>
+<h3 id="系统背景">1. 系统背景</h3>
+<ul>
+<li>由 Northpointe 公司开发（后更名 Equivant）</li>
+<li>用于预测被告“是否可能再犯”</li>
+<li>影响是否保释（bail）以及量刑（sentencing）</li>
+</ul>
+<p>讲者指出该系统的宣传语为“Software for Justice”，强调其“公正”。</p>
+<p>使用数据因素包括</p>
+<ul>
+<li>当前指控类型</li>
+<li>过去犯罪记录</li>
+<li>是否有稳定住处</li>
+<li>…</li>
+</ul>
+<p>这些看似“合理”的数据，构成了它的判断基础。</p>
+<h3 id="偏见问题曝光">2. 偏见问题曝光</h3>
+<p><strong>2016年 Julia Angwin 等人（ProPublica）调查发现：</strong></p>
+<blockquote>
+<p>“More black non-offenders were given high risk scores than white
+non-offenders.”</p>
+<p>“与白人非犯罪者相比，更多的黑人非罪犯获得了高风险评分。”</p>
+</blockquote>
+<p>这个现象称为：Disparate Impact（差别影响）</p>
+<h3 id="ai公司的辩护">3. AI公司的辩护</h3>
+<p>Northpointe 的回应要点：</p>
+<blockquote>
+<p>“COMPAS is fair because…”“COMPAS 是公平的，因为……”</p>
+</blockquote>
+<ol type="1">
+<li><strong>我们没用种族（race）作为输入特征</strong></li>
+<li><strong>我们对黑白人群准确率一样</strong>（都是 61%）</li>
+<li><strong>差异源于黑人群体的统计行为差异</strong>，不是我们算法的问题</li>
+</ol>
+<p>但讲者指出：</p>
+<ul>
+<li>accuracy != no discrimination</li>
+<li>是否公平取决于你持有什么伦理理论</li>
+<li>We can not solve algorithmic fairness purely mathematically</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr>
+<th>U</th>
+<th>D / VE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maximises utility</td>
+<td>No! Fair might be e.g. giving everyone the same opportunity,</td>
+</tr>
+<tr>
+<td></td>
+<td>不能恶化弱势群体处境，要确保机会平等与尊重人格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="justice-and-fairness">Justice And Fairness</h2>
+<h3 id="definition">1. Definition</h3>
+<ul>
+<li>Giving each their due or what they are owed
+正义是给予每个人应得之物</li>
+<li>Lady Justice（正义女神）：
+她戴着眼罩，象征着在评判中<strong>对不相关因素（如种族、性别）保持中立和盲目。</strong></li>
+</ul>
+<h3 id="variety-on-ethic-theory">2. Variety on ethic theory</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 48%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr>
+<th>伦理理论</th>
+<th>公平定义</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utilitarianism</td>
+<td>“Fairness is about equal consideration of interests, and maximizing
+utility for all.”</td>
+<td>公平是<strong>最大化总效用</strong>，并<strong>平等考虑所有人的利益</strong></td>
+</tr>
+<tr>
+<td>Deontology</td>
+<td>“Fairness involves respecting rights and treating people as ends,
+not mere means.”</td>
+<td>公平是<strong>尊重每个人的权利</strong>，不把人当成工具</td>
+</tr>
+<tr>
+<td>Virtue Ethics</td>
+<td>“Fairness is a moral virtue learned through practice and social
+context.”</td>
+<td>公平是一种<strong>通过社会互动与实践获得的道德美德</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="impossibility-theorem-不可能定理">3. Impossibility Theorem
+不可能定理</h3>
+<p>有人曾尝试用
+数学方法（14种不同度量方式）来衡量算法是否公平；但是Impossibility
+Theorem说明:</p>
+<blockquote>
+<p>It is mathematically impossible for an algorithm to satisfy all
+fairness measures at once.</p>
+</blockquote>
+<p>你想同时做到“统计平衡”、“误差平衡”、“样本平衡”？对不起，数学上不可能。</p>
+<h3 id="fairness-vs-performance-trade-off">4. Fairness vs Performance
+Trade-off</h3>
+<blockquote>
+<p>“Increasing fairness may reduce accuracy.”</p>
+<p>“提高公平性可能会降低准确性。”</p>
+</blockquote>
+<p>Increase fairness -&gt; decrease F+ （false
+positive）降低黑人被高估的几率 -&gt; Increase F-（false
+negative）可能会增加一些真正的高风险者被错放出来。</p>
+<p>讲者强调：</p>
+<blockquote>
+<p>“You must make a judgment call. No solution is
+perfect.”“你必须做出判断。没有解决方案是完美的。</p>
+</blockquote>
+<h2 id="accountability">Accountability</h2>
+<h3 id="what-is-accountability">1. What is Accountability</h3>
+<blockquote>
+<p>[!NOTE]</p>
+<p>预防，补救</p>
+</blockquote>
+<p>讲者开门见山地定义：</p>
+<blockquote>
+<p>“Accountability means being responsible for when things go wrong, or
+preventing harm from happening in the first place.”</p>
+<p>预防，补救</p>
+</blockquote>
+<p>它包含三个方面的责任行为：</p>
+<h4 id="预防prevention">1. <strong>预防</strong>（Prevention）</h4>
+<ul>
+<li>在设计或部署系统前，识别并规避潜在风险；</li>
+<li>例如 Thorac-25 医疗机器如果事先测试人机交互，就能避免放射事故。</li>
+</ul>
+<h4 id="回应与干预addressing">2.
+<strong>回应与干预</strong>（Addressing）</h4>
+<ul>
+<li>问题出现后迅速采取行动：如暂停使用、修改系统；</li>
+<li>可包括道歉、赔偿、公开调查等。</li>
+</ul>
+<h4 id="建立制度机制having-mechanisms">3.
+<strong>建立制度机制</strong>（Having mechanisms）</h4>
+<ul>
+<li>包括法律、行业准则、合同约束等；</li>
+<li>使责任清晰，不可推诿。</li>
+</ul>
+<p>其目的是促进有根据的信任，并认识到权力不平衡。”</p>
+<blockquote>
+<p>“And the aim is to <mark>promote warranted trust</mark>, and
+<mark>recognise power imbalances</mark>.”</p>
+</blockquote>
+<h3 id="transparency">2. Transparency</h3>
+<ul>
+<li>Being open, honest, and forthcoming</li>
+<li>COMPAS algorithm are trade secrets – not open to being scrutinized
+机密，不接受审查</li>
+<li>Thus: low trust and unfair (?) use of power</li>
+</ul>
+<h3 id="back-to-thorac-25">3. Back to Thorac-25</h3>
+<p>讲者再次提到 Thorac-25 放疗设备，作为“责任缺失”的典型：</p>
+<ul>
+<li>系统出错致多人严重放射中毒甚至死亡；</li>
+<li>制造商 <strong>否认问题来自机器</strong>，声称病人是死于癌症；</li>
+<li>他们还 <strong>移除了硬件安全锁</strong>，过度信任软件；</li>
+<li>没有让实际操作者（放射师）参与设计 →
+系统人机界面设计糟糕，警告难以理解。</li>
+</ul>
+<blockquote>
+<p>“They ignored the way people behave… and ended up with a machine that
+killed
+people.”“他们忽视了人们的行为方式……最后得到的是一台会杀人的机器。</p>
+</blockquote>
+<p>这反映出两个严重缺陷：</p>
+<ol type="1">
+<li>厂商不负责任；</li>
+<li>没有设计机制确保“出事有人负责”。</li>
+</ol>
+<hr />
+<h3 id="responsibility-gap">4. Responsibility Gap</h3>
+<p>谁负责？公司？政府？员工？设计者？…</p>
+<p>这就是所谓的：</p>
+<p><strong>“Responsibility Gap（责任缺口）”</strong> 即使 AI
+出错了，我们可能“找不到合适的责任人”——没人愿意负责。</p>
+<hr />
+<h3 id="moral-crumple-zone-替罪羊">5. Moral Crumple Zone 替罪羊</h3>
+<blockquote>
+<p>Moral crumple zone = “Blaming the nearest human with limited control
+over the AI”</p>
+<p>“责怪最近的人类，但对 AI 的控制有限”</p>
+<p>Scapegoating to protect AI system or vendor</p>
+<p>替罪羊保护AI系统或供应商</p>
+</blockquote>
+<p>就像汽车在撞击时设计有“车头缓冲区”保护乘客一样，<strong>某些 AI
+系统一出错，人类操作员就成了被推出来挡锅的“道德缓冲人肉位”</strong>。</p>
+<p>举例：<strong>Tesla 自动驾驶撞人案</strong></p>
+<ul>
+<li>公司声称司机应看路；</li>
+<li>讲者提示：可能是 Tesla 的系统不合理才让司机松懈；</li>
+<li>这种甩锅行为构成“道德缓冲区”。</li>
+</ul>
+<h3 id="procedural-justice-wong-afr-model">6. Procedural Justice: Wong
+AFR Model</h3>
+<blockquote>
+<p>[!NOTE]</p>
+<p>当你无法完全做到“结果公平”，那至少做到“程序公平” (Procedural
+Justice)</p>
+</blockquote>
+<p>引用 Pak-Hang Wong 的话：</p>
+<blockquote>
+<p>“Ensure decisions are morally and politically acceptable to those
+affected through inclusion and accommodation of their views.”</p>
+<p>“通过包容和包容他们的观点，确保他们的决定在道德和政治上为受影响的人所接受。”</p>
+</blockquote>
+<h4 id="问责如何实现wong-afr-model">问责如何实现？Wong AFR MODEL</h4>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 37%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr>
+<th>条件</th>
+<th>英文讲解</th>
+<th>中文解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Publicity condition<br />公开透明</td>
+<td>Decisions and rationales must be transparent and accessible</td>
+<td>决策逻辑必须公开、透明、能让大众理解</td>
+</tr>
+<tr>
+<td>Full Acceptability condition<br />合理解释</td>
+<td>give reasonable explanation</td>
+<td>用合理解释、原则、数据让被影响者可以接受系统用在他们身上</td>
+</tr>
+<tr>
+<td>Revision and Appeal condition<br />上诉</td>
+<td>People affected must be able to contest AI decisions</td>
+<td>必须能申诉和质疑</td>
+</tr>
+<tr>
+<td>Regulation condition<br />制度化</td>
+<td>These procedures must be enforced institutionally</td>
+<td>必须有制度保障这些条件被落实</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr>
+<th>问题</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>谁负责评分偏差？</td>
+<td>TalentAI 必须披露模型训练数据与误差特征</td>
+</tr>
+<tr>
+<td>谁对招聘决策负责？</td>
+<td>GlobalTech HR 必须参与解释并具备 override 能力</td>
+</tr>
+<tr>
+<td>候选人能否挑战结果？</td>
+<td>必须提供人工申诉渠道与复评机制</td>
+</tr>
+<tr>
+<td>外部如何监督系统？</td>
+<td>政府或第三方机构需有权审核系统公平性与透明性</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mind-map">Mind Map</h2>
+<ul>
+<li><strong>Define trust and trustworthiness for AI</strong>
+<ul>
+<li>predictability, enable collaboration</li>
+<li>信任三要素
+<ul>
+<li>A believes M will act in A’s best interests</li>
+<li>accept vulnerability</li>
+<li>anticipate the impact of M’s decision, enabling collaboration.</li>
+</ul></li>
+<li>Trust &amp; distrust &amp; Lack of trust
+<ul>
+<li>Lack of trust: 我不知道他对我是不是有害的</li>
+</ul></li>
+<li>Contractual trust - 只相信AI的部分能力，不是全方位trust</li>
+<li>Trust vs Trustworthiness
+<ul>
+<li>Trust is Subjective, Trustworthiness is Objective</li>
+<li>Warranted (correct action) and unwarranted trust and distrust</li>
+</ul></li>
+</ul></li>
+<li><strong>Understand effects of use, misuse, abuse, and disuse of
+machines when trust is not well calibrated</strong>
+<ul>
+<li>Misuse -&gt; Using a M which should not be used 用了不该用的系统
+-&gt; Unwarranted Trust</li>
+<li>Disuse -&gt; Not using a M which should be used
+拒绝使用本应使用的系统 -&gt; Unwarranted Distrust</li>
+<li>Abuse -&gt; Deploying automation when it should not be used
+系统本身不值得信任，却被开发者部署。错误地不信任人类能完成某些任务 -&gt;
+Unwarranted Distrust</li>
+</ul></li>
+<li><strong>Power</strong>
+<ul>
+<li>The ability to control circumstances</li>
+<li>权利不对等</li>
+<li>4 red flag
+<ul>
+<li>是否存在权力不对称？</li>
+<li>决策者是否不受系统影响？风险是否对等？</li>
+<li>是否有人不信任AI？</li>
+<li>决策者是否愿意自己也被该系统评估？</li>
+</ul></li>
+</ul></li>
+<li><strong>Consider issues of fairness and justice</strong>
+<ul>
+<li>Giving each their due or what they are owed
+正义是给予每个人应得之物</li>
+<li>Variety on ethic theory</li>
+<li>Impossibility theorem: cannot solve by math</li>
+<li>Trade of (accrcury vs performance)</li>
+</ul></li>
+<li><strong>Understand the nature of accountability for AI</strong>
+<ul>
+<li>Prevention, addressing, having mechanisms
+预防，补救，建立措施制度</li>
+<li>Responsibility Gap -&gt; 没人负责</li>
+<li>Moral Crumple Zone -&gt; blame nearest human, 替罪羊</li>
+<li>Method -&gt; Wong AFR Model</li>
+</ul></li>
+</ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>

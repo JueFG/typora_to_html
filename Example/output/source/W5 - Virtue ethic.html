@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="gothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>w5 - Virtue ethic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="gothic.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">AI Ethics</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 1-2 Background <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w1 - AI History.html">w1 - AI History</a></li>
+                <li><a href="w2 - Intro of Ethics.html">w2 - Intro of Ethics</a></li>
+               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 3-5 Ethics Type <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w3 - Utilitarianism.html">w3 - Utilitarianism</a></li>
+                <li><a href="w4 - Deontology.html">w4 - Deontology</a></li>
+                <li><a href="w5 - Virtue ethic.html">w5 - Virtue ethic</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 6-7 & 9 分析方式<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w6 - Trust, justice, and accountability.html">w6 - Trust, justice, and accountability</a></li>
+                <li><a href="w7 - Tranparency.html">w7 - Tranparency</a></li>
+                <li><a href="w9 - Algorithmic Bias, Accessibility & Equity.html">w9 - Algorithmic Bias, Accessibility & Equity</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 10-11 治理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w10 - Data Governance.html">w10 - Data Governance</a></li>
+                <li><a href="w11 - Explainable AI.html">w11 - Explainable AI</a></li>
+              </ul>
+            </li>        
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weeks 8 Guest<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="w8 - AI Ethic in Medicine.html">w8 - AI Ethic in Medicine</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#virtues-ethics" id="toc-virtues-ethics">virtues
+          ethics</a>
+          <ul>
+          <li><a href="#what-is-a-virtue" id="toc-what-is-a-virtue">What
+          is a virtue?</a>
+          <ul>
+          <li><a href="#真正的美德是什么"
+          id="toc-真正的美德是什么">真正的美德是什么？</a></li>
+          </ul></li>
+          <li><a href="#how-do-we-learn-virtues"
+          id="toc-how-do-we-learn-virtues">How do we learn virtues?</a>
+          <ul>
+          <li><a href="#aristotle-vs-kant"
+          id="toc-aristotle-vs-kant">Aristotle vs Kant</a></li>
+          </ul></li>
+          <li><a href="#compare" id="toc-compare">Compare</a></li>
+          <li><a href="#how-do-we-apply" id="toc-how-do-we-apply">How Do
+          We apply?</a>
+          <ul>
+          <li><a href="#什么是golden-mean"
+          id="toc-什么是golden-mean">什么是“Golden Mean”？</a></li>
+          <li><a href="#不是死的标准而是随着情境在变的目标"
+          id="toc-不是死的标准而是随着情境在变的目标">不是死的标准，而是<strong>随着情境在变的目标</strong>。</a>
+          <ul>
+          <li><a href="#情境一同学偷了你的作业还删了备份然后笑你"
+          id="toc-情境一同学偷了你的作业还删了备份然后笑你">情境一：同学偷了你的作业，还删了备份然后笑你</a></li>
+          <li><a href="#情境二有人杀害你最好的朋友"
+          id="toc-情境二有人杀害你最好的朋友">情境二：有人杀害你最好的朋友</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#phronesis" id="toc-phronesis">Phronesis</a>
+          <ul>
+          <li><a href="#what-is-phronesis"
+          id="toc-what-is-phronesis">What is Phronesis?</a></li>
+          <li><a href="#为什么实践智慧很重要"
+          id="toc-为什么实践智慧很重要">为什么实践智慧很重要？</a>
+          <ul>
+          <li><a href="#example-1忠诚-vs-慈善"
+          id="toc-example-1忠诚-vs-慈善">Example 1：忠诚 vs
+          慈善</a></li>
+          <li><a href="#example-2-岳母的故事"
+          id="toc-example-2-岳母的故事">Example 2: 岳母的故事</a></li>
+          <li><a href="#example-3-al" id="toc-example-3-al">Example 3:
+          AL</a></li>
+          </ul></li>
+          </ul></li>
+          <li><a href="#shannon-vallor-techno-virtues"
+          id="toc-shannon-vallor-techno-virtues">Shannon Vallor
+          Techno-virtues</a>
+          <ul>
+          <li><a href="#她推荐的-ai-开发者应具备的美德有"
+          id="toc-她推荐的-ai-开发者应具备的美德有">她推荐的 AI
+          开发者应具备的美德有：</a></li>
+          </ul></li>
+          <li><a href="#care-ethics" id="toc-care-ethics">Care
+          Ethics</a>
+          <ul>
+          <li><a href="#为什么科技需要关怀美德"
+          id="toc-为什么科技需要关怀美德">为什么科技需要“关怀美德”？</a></li>
+          </ul></li>
+          <li><a href="#应用案例社交媒体让我们更有德还是更邪恶"
+          id="toc-应用案例社交媒体让我们更有德还是更邪恶">应用案例：社交媒体让我们更有德，还是更邪恶？</a></li>
+          <li><a href="#批判" id="toc-批判">批判</a></li>
+          </ul></li>
+          <li><a href="#mind-map" id="toc-mind-map">Mind map</a>
+          <ul>
+          <li><a href="#outside-of-class-感觉---思考---行为"
+          id="toc-outside-of-class-感觉---思考---行为">Outside of class
+          感觉 -&gt; 思考 -&gt; 行为</a></li>
+          <li><a href="#section" id="toc-section"></a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="virtues-ethics">virtues ethics</h1>
+<p>美德伦理学是一种伦理理论，重点不是我们做了什么行为（像功利主义），也不是我们是否履行了某种义务（像义务论），而是<strong>我们是怎样的一个人</strong>。它关心的是我们是否是一个有「好品格」的人，一个值得尊重、值得模仿的人</p>
+<p>Virtue ethics focuses on the <mark>character of the moral
+agent</mark> rather than specific actions or consequences. The key idea
+is that morality is about <mark>being a good person</mark> who acts from
+virtuous character traits like honesty, courage, patience, and
+kindness.</p>
+<h2 id="what-is-a-virtue">What is a virtue?</h2>
+<p><strong>Virtue</strong> 是什么意思？可能你听过“Patience is a
+virtue（耐心是一种美德）”，但平时我们不太常用这个词。</p>
+<p>老师提到，现代人有时用“virtue
+signalling（美德标榜）”来批评别人假装有道德，比如在社交平台发文说“我帮助了流浪汉”，但其实只为了博关注，不是真的关心别人。</p>
+<p>但是我们今天讲的是<strong>真正的</strong>美德，不是这种假道德。</p>
+<h3 id="真正的美德是什么">真正的美德是什么？</h3>
+<details>
+<summary>
+点击展开内容 (optional)
+</summary>
+<div>
+老师给了很多例子，包括佛陀、孔子、甘地、曼德拉、Rosa Parks、Maximilian
+Kolbe.<br><br> - 佛陀（Buddha）——慈悲与智慧（Compassion &amp;
+Wisdom）<br><br> - 孔子（Confucius）——正直、德性（Uprightness, De）<br>
+-
+孔子在中国传统中被视为有“德性（德：De）”的典范。他追求正直、公正、知礼守信，强调成为“君子”的重要性。这也体现了一种道德人格的追求。<br><br>
+- 曼德拉（Nelson Mandela）——正义与抗争（Justice &amp; Resistance）<br> -
+曼德拉反抗南非的种族隔离制度，是正义（justice）与坚定抗争（moral
+courage）的象征。他为了反对不公正的制度，入狱多年，展现了极强的道德毅力。<br><br>
+- 甘地（Gandhi）——奉献与勇气（Devotion &amp; Self-sacrifice）<br> -
+甘地用“非暴力抗争”的方式带领印度争取独立。他展现出奉献精神（devotion）、非暴力的勇气（moral
+courage）以及自我牺牲（self-sacrifice）。<br><br> - 特蕾莎修女（Mother
+Teresa）——关怀与奉献（Care &amp; Sacrifice）<br> -
+特蕾莎修女放弃自己原本可以拥有的生活，照顾印度加尔各答的穷人。她代表了一种慈悲（compassion）、谦卑（humility）与关怀他人的美德。<br><br>
+- 罗莎·帕克斯（Rosa Parks）——正义与勇气（Justice &amp; Courage）<br> -
+罗莎·帕克斯因拒绝在公交车上给白人让座而被捕，这个行为在当时非常大胆，代表了对种族歧视法律的挑战，她展现出极大的勇气与正义感。<br><br>
+- Maximilian
+Kolbe（马克西米利安·科尔贝）——无私与英雄主义（Self-sacrifice &amp;
+Compassion）<br> - Kolbe
+是一位波兰神父，被纳粹关进集中营。一天，一名囚犯逃跑后，纳粹随机挑了10人要饿死处决。其中一人哭喊“我有妻子和孩子！”Kolbe
+自愿代替这个人去死。他带领囚室中的人一起祷告和唱歌。10天后大多数人都饿死了，Kolbe
+仍然平静地面对纳粹注射毒药。<br> -
+这是极端无私（selflessness）和极大勇气（extraordinary
+courage）的表现，也就是 virtue ethics 中最推崇的道德行为之一。<br>
+</div>
+</details>
+<p><mark style="background-color: #90ee90;"> Virtue = moral
+character（道德品格）<br>= <em>Right</em> feeling and <em>right</em>
+amount, <em>right</em> action, <em>right</em> reason, <em>right</em>
+way, to <em>right</em> people</mark></p>
+<p>Virtual is sensitive to circumstances.</p>
+<table>
+<thead>
+<tr>
+<th>英文美德</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>benevolence</td>
+<td>仁慈</td>
+</tr>
+<tr>
+<td>fairness</td>
+<td>公平</td>
+</tr>
+<tr>
+<td>prudence</td>
+<td>谨慎</td>
+</tr>
+<tr>
+<td>civility</td>
+<td>礼貌</td>
+</tr>
+<tr>
+<td>friendliness</td>
+<td>友善</td>
+</tr>
+<tr>
+<td>reasonableness</td>
+<td>理性</td>
+</tr>
+<tr>
+<td>compassion</td>
+<td>同情心</td>
+</tr>
+<tr>
+<td>generosity</td>
+<td>慷慨</td>
+</tr>
+<tr>
+<td>resourcefulness</td>
+<td>足智多谋</td>
+</tr>
+<tr>
+<td>conscientiousness</td>
+<td>尽责</td>
+</tr>
+<tr>
+<td>honesty</td>
+<td>诚实</td>
+</tr>
+<tr>
+<td>self-discipline</td>
+<td>自律</td>
+</tr>
+<tr>
+<td>cooperativeness</td>
+<td>合作精神</td>
+</tr>
+<tr>
+<td>justice</td>
+<td>正义</td>
+</tr>
+<tr>
+<td>self-reliance</td>
+<td>自立</td>
+</tr>
+<tr>
+<td>courage</td>
+<td>勇气</td>
+</tr>
+<tr>
+<td>loyalty</td>
+<td>忠诚</td>
+</tr>
+<tr>
+<td>tactfulness</td>
+<td>机智、得体</td>
+</tr>
+<tr>
+<td>dependability</td>
+<td>可靠性</td>
+</tr>
+<tr>
+<td>moderation</td>
+<td>节制</td>
+</tr>
+<tr>
+<td>thoughtfulness</td>
+<td>体贴</td>
+</tr>
+<tr>
+<td>diligence</td>
+<td>勤奋</td>
+</tr>
+<tr>
+<td>patience</td>
+<td>耐心</td>
+</tr>
+<tr>
+<td>tolerance</td>
+<td>宽容</td>
+</tr>
+<tr>
+<td>self-sacrifice</td>
+<td>无私</td>
+</tr>
+<tr>
+<td>de</td>
+<td>德</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-do-we-learn-virtues">How do we learn virtues?</h2>
+<p><strong>我们不是天生就知道什么是美德。</strong></p>
+<p><mark>Aristotle（亚里士多德）</mark>认为：</p>
+<blockquote>
+<p>没有“道德天才儿童”。小孩可能是数学天才，但不会是“美德天才”。</p>
+</blockquote>
+<p>因为——<strong>美德需要时间、教育、榜样和练习。</strong></p>
+<p>💡 就像你小时候爸妈说：</p>
+<ul>
+<li>“不可以欺负你妹妹”</li>
+<li>“要学会分享”</li>
+<li>“你是个诚实的孩子”</li>
+</ul>
+<p>这些就是早期的美德训练。
+长大以后你会更深刻地理解“什么是忠诚、诚实、勇气”。</p>
+<h3 id="aristotle-vs-kant">Aristotle vs Kant</h3>
+<table>
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th>Kant</th>
+<th>Aristotle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A good will<br />follow moral law<br />do duty</td>
+<td>Right attitude / inclinations 倾向 / emotions</td>
+</tr>
+<tr>
+<td>-&gt; feeling is not necessary <br />-&gt; the right response is
+merely following duty and demands of reason</td>
+<td>-&gt; the right response is complex</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="compare">Compare</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>Intention, motive, feeling to rightness of actions</p>
+</blockquote>
+<p><img src="https://p.ipic.vip/5h2n8l.png" /></p>
+<h2 id="how-do-we-apply">How Do We apply?</h2>
+<h3 id="什么是golden-mean">什么是“Golden Mean”？</h3>
+<ul>
+<li>Golden Mean（黄金中庸） 是Aristotle提出的一个核心概念。</li>
+<li>它的意思是：<strong>真正的美德处在两个极端之间，是“刚刚好”的那个点。</strong></li>
+<li>一个极端叫“缺失”（deficiency），另一个极端叫“过度”（excess），两个极端都是恶（vice）。</li>
+<li>不是死的标准，而是随着情境在变的目标 Virtue is like hitting a moving
+target.</li>
+</ul>
+<p>所以：美德 ≠
+简单的行为，而是找到在特定情境下刚刚好的行为、情感、判断、态度。</p>
+<ul>
+<li>E.g., 懦弱 &lt;-&gt; 勇气 &lt;-&gt; 鲁莽</li>
+</ul>
+<h3
+id="不是死的标准而是随着情境在变的目标">不是死的标准，而是<strong>随着情境在变的目标</strong>。</h3>
+<h4
+id="情境一同学偷了你的作业还删了备份然后笑你">情境一：同学偷了你的作业，还删了备份然后笑你</h4>
+<ul>
+<li><p>无动于衷 &lt;-&gt; 正义的愤怒 &lt;-&gt; 报复（情绪失控）</p></li>
+<li><p>最恰当的是：<strong>表达愤怒、维护公正，但不毁掉自己或他人</strong></p></li>
+</ul>
+<h4 id="情境二有人杀害你最好的朋友">情境二：有人杀害你最好的朋友</h4>
+<ul>
+<li><p>情境严重程度上升，<strong>适当的愤怒水平也应该提高</strong>。</p></li>
+<li><p>黄金中庸不是“永远保持温和”，而是<strong>根据情境，拿捏最合适的情感反应与行为方式</strong>。</p></li>
+</ul>
+<h2 id="phronesis">Phronesis</h2>
+<h3 id="what-is-phronesis">What is Phronesis?</h3>
+<p><mark style="background-color: #90ee90;"> Phronesis = Practical
+Wisdom</mark></p>
+<ul>
+<li>是你<strong>能在复杂现实中做出适当道德判断的能力</strong>。</li>
+<li>Need practice to learn</li>
+<li>他是<mark>不可替代的人类能力</mark></li>
+<li>换句话说，它是：
+<ul>
+<li><strong>“知道该如何在特定情境下把美德做得恰到好处。”</strong></li>
+</ul></li>
+</ul>
+<h3 id="为什么实践智慧很重要">为什么实践智慧很重要？</h3>
+<p>因为生活中很多时候不是“一个美德 vs. 恶行”，
+而是多个美德之间起冲突，你得判断“谁更重要”。</p>
+<h4 id="example-1忠诚-vs-慈善">Example 1：忠诚 vs 慈善</h4>
+<p><strong>情境设定</strong>：</p>
+<ul>
+<li>你一个快死的好朋友留下一笔钱让你捐给 Collingwood Football
+Club（一个运动俱乐部）。</li>
+<li>但你路上突然意识到，这笔钱可以<strong>救很多饥饿中的生命</strong>！</li>
+</ul>
+<p><strong>你该怎么做？</strong></p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 31%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th>行动</th>
+<th>显示哪种美德？</th>
+<th>可能的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>忠实执行承诺</td>
+<td>忠诚（Loyalty）</td>
+<td>但这笔钱原本可以救很多人</td>
+</tr>
+<tr>
+<td>改变用途捐给慈善机构</td>
+<td>慈善/仁爱（Benevolence）</td>
+<td>会不会背叛了对朋友的承诺和信任？</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 这就是“实践智慧”的场合：
+你需要衡量利弊、尊重他人意愿，又同时看重大局正义感。</p>
+<h4 id="example-2-岳母的故事">Example 2: 岳母的故事</h4>
+<blockquote>
+<p>她试图安慰哭泣的孙女：“不要哭啦…比赛总是有赢有输的……这次你是输的那一个。”</p>
+</blockquote>
+<p>本来是<strong>出于慈悲（compassion）</strong>，
+但说出口的话反而<strong>伤害了孩子的心</strong>。</p>
+<p>➡️ 她缺少的是
+<strong>phronesis</strong>——不知道怎么表达善意，反而弄巧成拙。</p>
+<h4 id="example-3-al">Example 3: AL</h4>
+<p>法官是否应该依赖 AI 系统来判刑？</p>
+<ul>
+<li>AI 可以预测再犯概率（如 COMPAS 系统）</li>
+<li>但它是black box、偏见风险高、人类也不了解它怎么做判断</li>
+</ul>
+<p>🤔 那么你作为一个有实践智慧的“好人法官”，应该怎么判断？</p>
+<table>
+<thead>
+<tr>
+<th>你会思考的问题：</th>
+<th>对应的 virtue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>这个算法是否公正？</td>
+<td>正义 justice</td>
+</tr>
+<tr>
+<td>是否会伤害被告的权利？</td>
+<td>同情 compassion</td>
+</tr>
+<tr>
+<td>我能否理解它的运作？</td>
+<td>智慧 wisdom</td>
+</tr>
+<tr>
+<td>是否是在逃避自己的责任？</td>
+<td>勇气 courage</td>
+</tr>
+</tbody>
+</table>
+<p>💡
+<strong>美德伦理学强调：你不能只靠规则或结果判断，而是要用智慧综合判断。</strong></p>
+<h2 id="shannon-vallor-techno-virtues">Shannon Vallor
+Techno-virtues</h2>
+<p>在面对技术不确定性、后果不可预测的时代，我们不能只靠规则或计算后果,
+Shannon Vallor 提出, AI 开发者需要：</p>
+<blockquote>
+<p><mark style="background-color: #90ee90;"> <strong>“Techno-moral
+wisdom” = 实践智慧 + 技术意识</strong></mark></p>
+</blockquote>
+<h3 id="她推荐的-ai-开发者应具备的美德有">她推荐的 AI
+开发者应具备的美德有：</h3>
+<table>
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>美德</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>honesty 诚实</td>
+<td>不误导用户或隐藏缺陷</td>
+</tr>
+<tr>
+<td>humility 谦卑</td>
+<td>承认科技无法解决一切问题，不要狂妄</td>
+</tr>
+<tr>
+<td>justice 公正</td>
+<td>不让算法歧视特定群体</td>
+</tr>
+<tr>
+<td>courage 勇气</td>
+<td>敢于对不道德的公司说不</td>
+</tr>
+<tr>
+<td>empathy 同理心</td>
+<td>理解用户可能被伤害</td>
+</tr>
+<tr>
+<td>Care</td>
+<td>理解用户的情感和需求</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td><mark style="background-color: #90ee90;"> techno-moral wisdom
+(phrionesis)</mark></td>
+<td>综合判断技术行为的伦理后果</td>
+</tr>
+</tbody>
+</table>
+<h2 id="care-ethics">Care Ethics</h2>
+<p><img src="https://p.ipic.vip/zc3qax.png" alt="image-20250619054750344" style="zoom:50%;" />
+“我们不是独立个体，而是相互依存的关系体。”</p>
+<ol type="1">
+<li><p>美德伦理的一个特别发展方向，特别强调人际关系中的情感</p></li>
+<li><p>历史背景：</p>
+<ul>
+<li><p>起源于1970年代的女性主义伦理学者，如 Carol Gilligan 与 Joan
+Tronto。</p></li>
+<li><p>她们反对传统伦理 <mark>(<a
+href="w4%20-%20Deontology.md#kantian-deontology">Kant Deontology</a>, <a
+href="w3%20-%20Utilitarianism.md#john-stuart-mill">Mill</a> / <a
+href="w3%20-%20Utilitarianism.md#bentham">Bentham
+Utilitarianism</a>)</mark>过于冷漠、抽象，忽视了<strong>情感、关系与现实中的脆弱性</strong>
+<mark>ignore vulnerability。</mark></p></li>
+</ul></li>
+<li><p>Care begin in close <mark style="background-color: #90ee90;">
+relationship</mark></p>
+<ul>
+<li>Family, school, group…</li>
+</ul></li>
+<li><p>People have care should:</p>
+<ul>
+<li><p>Attending, listening, loving, feeling, taking responsibility</p>
+<ul>
+<li><mark style="background-color: #90ee90;"> Recognising vulnerability,
+powerlessness</mark>
+<ul>
+<li>e.g. disabled, minorities, oppressed, other genders/sexualities,
+disadvantaged</li>
+</ul></li>
+</ul></li>
+<li><p>Relationship sometime &gt; justices</p></li>
+<li><p>Avoid deficiency (too indifferent to others’ needs) and excess
+(ruining own health; smothering)</p></li>
+</ul></li>
+<li><p>Also need phronesis</p></li>
+</ol>
+<h3 id="为什么科技需要关怀美德">为什么科技需要“关怀美德”？</h3>
+<p>现代科技往往以“效率”“中立”“自动化”为优先，但：</p>
+<ul>
+<li>它常常<strong>忽略了用户的脆弱性</strong>
+<ul>
+<li>对于弱势群体（残障者、老人、性少数等）<strong>照顾不足</strong></li>
+</ul></li>
+<li>或者在社交平台上，<strong>鼓励冷漠、攻击、攀比、成瘾</strong></li>
+</ul>
+<h2
+id="应用案例社交媒体让我们更有德还是更邪恶">应用案例：社交媒体让我们更有德，还是更邪恶？</h2>
+<p><strong>讲者在幻灯片最后提出的问题</strong>：</p>
+<blockquote>
+<p>DOES SOCIAL MEDIA MAKE US MORE OR LESS VIRTUOUS?
+社交媒体让我们变得更有美德，还是更糟？</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>哪些美德受挑战？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络霸凌、匿名攻击</td>
+<td>缺乏同理心 empathy、节制 temperance</td>
+</tr>
+<tr>
+<td>炫耀自己生活、攀比</td>
+<td>缺乏谦卑 humility、感恩 gratitude</td>
+</tr>
+<tr>
+<td>沉迷点赞、获得虚荣</td>
+<td>缺乏自制 self-control、智慧 wisdom</td>
+</tr>
+<tr>
+<td>算法推送偏见或操纵言论</td>
+<td>技术设计者缺乏公正 justice、透明 honesty</td>
+</tr>
+</tbody>
+</table>
+<p>💡
+如果科技设计者能<strong>带着美德来设计社交工具</strong>，也许它可以：</p>
+<ul>
+<li>增强真实的联系（civility, friendship）</li>
+<li>鼓励良好行为（generosity, kindness）</li>
+<li>抑制伤害性内容（moderation, care）</li>
+</ul>
+<h2 id="批判">批判</h2>
+<table>
+<thead>
+<tr>
+<th>批评主题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Too vague 太模糊</td>
+</tr>
+<tr>
+<td>VE doesn’t tell us what to <em>do,</em> only how to <em>be</em></td>
+</tr>
+<tr>
+<td>Duties; calculating consequences are much clearer procedure!</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td><strong>But</strong></td>
+</tr>
+<tr>
+<td>Golden mean</td>
+</tr>
+<tr>
+<td>What a virtuous person would do?</td>
+</tr>
+<tr>
+<td>Phronesis: Practical wisdom to apply virtues to situations</td>
+</tr>
+<tr>
+<td>VE versatile 多功能, flexible, sensitive to situations</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="mind-map">Mind map</h1>
+<p><strong>什么是美德？</strong> →
+好性格，不是只看行为，而是“你是谁”。</p>
+<p><strong>哪里学来的？</strong> →
+父母、故事、榜样、重复练习。(Aristotle)</p>
+<p><strong>怎么判断对错？</strong> →
+观察典范、实践智慧（Phronesis）。</p>
+<p><strong>怎样避免极端？</strong> → Golden
+mean：找出情境中的“刚刚好”。</p>
+<p><strong>变种</strong>: Tech-virtues -&gt; use tech-phronesis</p>
+<p><strong>Care</strong> -&gt; 关注 relationship, 关注 vulnerability</p>
+<p><strong>批判: 太模糊</strong> -&gt; no what to do but only how to
+be</p>
+<p><strong>怎么应用在AI与社交技术中？</strong></p>
+<h2 id="outside-of-class-感觉---思考---行为">Outside of class 感觉 -&gt;
+思考 -&gt; 行为</h2>
+<p>一个人通过自然倾向、教育训练和模仿榜样，逐渐形成了稳定的情绪模式和判断倾向，这些内在状态在长期中塑造出他的德性或恶性，然后反映在日常行为上。</p>
+<p>Virtue 是中庸之道，Vice
+是两个极端。<strong>每种恶性其实是美德的“偏差版本”</strong>。</p>
+<p><strong>不是偶尔做对事就是“有德性”。</strong></p>
+<ul>
+<li>真正的德性体现在<strong>长期稳定的行为表现</strong>上。</li>
+<li>例如：一个诚实的人不是只说了一次真话，而是<strong>长期、在各种诱惑下都能维持诚实</strong>。</li>
+<li>这就解释了为什么 virtue 是一种 <strong>“character
+disposition”（品格倾向）</strong>，不是单一事件。</li>
+</ul>
+<p>情绪在美德伦理学中不是“问题”，而是道德判断的重要组成。</p>
+<h2 id="section"></h2>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+
+        /* Add quote styles */
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("blockquote").forEach(function (block) {
+            const first = block.querySelector("p");
+            if (!first) return;
+            const text = first.textContent.trim();
+
+            if (text.startsWith("[!NOTE]")) {
+              block.classList.add("note");
+              first.innerHTML = "<strong>NOTE</strong>" + first.innerHTML.replace("[!NOTE]", "");
+            } else if (text.startsWith("[!TIP]")) {
+              block.classList.add("tip");
+              first.innerHTML = "<strong>TIP</strong>" + first.innerHTML.replace("[!TIP]", "");
+            } else if (text.startsWith("[!WARNING]")) {
+              block.classList.add("warning");
+              first.innerHTML = "<strong>WARNING</strong>" + first.innerHTML.replace("[!WARNING]", "");
+            }
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href) continue;
+
+            if (href.indexOf('.md#') !== -1) {
+              var parts = href.split('.md#');
+              var newHref = parts[0] + '.html#' + parts[1];
+              links[i].setAttribute('href', newHref);
+            } else if (href.length > 3 && href.slice(-3) === '.md') {
+              var newHref = href.slice(0, -3) + '.html';
+              links[i].setAttribute('href', newHref);
+            }
+          }
+        });
+
+
+
+
+    </script>
+  </body>
+</html>
