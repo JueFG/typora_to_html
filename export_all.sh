@@ -16,7 +16,8 @@ for f in *.md; do
   [[ "$f" == "README.md" ]] && continue
   mdfiles+=("$f")
 done
-IFS=$'\n' sorted=($(printf "%s\n" "${mdfiles[@]}" | sort -V))
+IFS=$'\n' sorted=($(printf "%s\n" "${mdfiles[@]}" | LC_ALL=C sort))
+
 
 # 写 index.html 页眉
 cat <<EOF > "$INDEX"
